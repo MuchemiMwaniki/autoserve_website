@@ -1,0 +1,3070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autoserve & Hardware Supplies Ltd | Genuine Spare Parts Kenya</title>
+<meta name="description" content="Genuine OEM, aftermarket and reconditioned spare parts for Toyota, Nissan, Isuzu, Subaru and more. Delivered across Kenya.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',Segoe UI,Arial,sans-serif;background:#0b0b0b;color:#fff}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+input,select,textarea{font-family:inherit}
+
+:root{
+  --gold:#d4af37;--gold-dim:#b8952d;--gold-pale:rgba(212,175,55,.1);
+  --border:#252525;--border2:#2e2e2e;
+  --dark2:#111;--dark3:#0e0e0e;--dark4:#141414;
+  --wa:#25d366;--wa-hover:#1fb858;
+  --r:10px;--r-sm:6px;--r-xs:4px;
+}
+
+/* ── PAGES ── */
+.page{display:none}.page.active{display:block}
+
+/* ── TOAST ── */
+#toasts{position:fixed;bottom:24px;right:24px;z-index:9000;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.toast{display:flex;align-items:flex-start;gap:10px;padding:12px 16px;border-radius:var(--r-sm);font-size:13.5px;color:#eee;min-width:260px;max-width:360px;pointer-events:all;animation:tIn .22s ease;border:1px solid}
+.toast.t-success{background:#0d1f10;border-color:rgba(34,197,94,.25)}
+.toast.t-error{background:#1c0d0d;border-color:rgba(239,68,68,.25)}
+.toast.t-info{background:#151200;border-color:rgba(212,175,55,.2)}
+.toast.leaving{animation:tOut .22s ease forwards}
+.toast-msg{flex:1;line-height:1.45}
+.toast-x{color:#555;font-size:18px;line-height:1;padding:0 2px;flex-shrink:0;transition:color .12s}
+.toast-x:hover{color:#fff}
+@keyframes tIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes tOut{to{opacity:0;transform:translateY(6px)}}
+
+/* ── HEADER ── */
+header{background:#111;position:sticky;top:0;z-index:500;height:64px;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;box-shadow:0 1px 20px rgba(0,0,0,.5)}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--gold);letter-spacing:2px;cursor:pointer;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.logo-dot{width:7px;height:7px;background:var(--gold);border-radius:50%}
+nav{display:flex;align-items:center;gap:2px}
+nav button{color:#999;padding:7px 13px;border-radius:var(--r-sm);font-size:13.5px;font-weight:500;transition:all .15s}
+nav button:hover{color:#fff;background:rgba(255,255,255,.06)}
+nav button.active{color:var(--gold);background:var(--gold-pale)}
+.hdr-right{display:flex;align-items:center;gap:8px}
+.wa-btn{display:flex;align-items:center;gap:7px;background:var(--wa);color:#fff;padding:8px 16px;border-radius:var(--r-sm);font-size:13px;font-weight:600;transition:background .15s;text-decoration:none;flex-shrink:0}
+.wa-btn:hover{background:var(--wa-hover)}
+.wa-btn svg{width:15px;height:15px;fill:#fff;flex-shrink:0}
+.menu-toggle{display:none;color:#aaa;font-size:22px;padding:6px;transition:color .15s}
+.menu-toggle:hover{color:#fff}
+
+/* mobile nav drawer */
+@media(max-width:900px){
+  header{padding:0 16px}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;border-bottom:1px solid #252525;flex-direction:column;align-items:stretch;padding:8px 12px 14px;z-index:499;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  nav.open{display:flex}
+  nav button{text-align:left;padding:12px 14px;font-size:15px}
+  .menu-toggle{display:block}
+  .logo-text-full{display:none}
+}
+
+/* ── HOME ── */
+.hero{padding:96px 20px 80px;text-align:center;background:linear-gradient(160deg,#060606,#141414 50%,#1a1a1a);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 45%,rgba(212,175,55,.07),transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.2),transparent)}
+.hero-in{position:relative;z-index:1;max-width:860px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:22px}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:58px;font-weight:800;line-height:1;margin-bottom:14px;letter-spacing:.5px}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:17px;color:#bbb;max-width:580px;margin:0 auto 8px;line-height:1.65}
+.hero-sub{font-size:13px;color:#555;margin-bottom:36px}
+.search-box{max-width:780px;margin:0 auto 18px;display:flex;border-radius:50px;overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.5);border:1px solid #2a2a2a}
+.search-box input{flex:1;padding:17px 24px;font-size:15px;border:none;background:#1a1a1a;color:#fff;outline:none}
+.search-box input::placeholder{color:#555}
+.search-box button{padding:17px 34px;background:var(--gold);font-weight:700;font-size:14px;color:#000;transition:background .15s;white-space:nowrap}
+.search-box button:hover{background:var(--gold-dim)}
+.hero-badges{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:#666}
+.hero-badges span{display:flex;align-items:center;gap:6px}
+.hero-badges strong{color:#bbb}
+
+.stats-bar{background:#0d0d0d;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:20px 40px;display:flex;justify-content:center;gap:64px;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:800;color:var(--gold);line-height:1}
+.stat-label{font-size:11px;color:#444;text-transform:uppercase;letter-spacing:.6px;margin-top:3px}
+
+.section{padding:72px 40px}
+.section-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:10px}
+.section-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--gold);letter-spacing:.5px}
+.section-sub{color:#555;font-size:13px;margin-top:4px}
+.section-link{font-size:13px;color:var(--gold);font-weight:600;opacity:.8;transition:opacity .15s;cursor:pointer}
+.section-link:hover{opacity:1}
+
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
+.cat-tile{background:#131313;border:1px solid var(--border);border-radius:var(--r);padding:22px 12px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.cat-tile::before{content:'';position:absolute;inset:0;background:var(--gold-pale);opacity:0;transition:opacity .2s}
+.cat-tile:hover{border-color:rgba(212,175,55,.35);transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.cat-tile:hover::before{opacity:1}
+.cat-tile .ti{font-size:30px;margin-bottom:8px;position:relative}
+.cat-tile .tn{font-size:13px;font-weight:600;color:#eee;position:relative}
+.cat-tile .tc{font-size:11px;color:#555;position:relative;margin-top:2px}
+
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.why-card{background:#0f0f0f;border:1px solid var(--border);border-radius:var(--r);padding:24px 20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s}
+.why-card:hover{border-color:rgba(212,175,55,.2)}
+.why-icon{width:42px;height:42px;border-radius:var(--r-sm);background:var(--gold-pale);border:1px solid rgba(212,175,55,.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.why-text h3{font-size:14px;font-weight:700;margin-bottom:5px;color:#eee}
+.why-text p{font-size:13px;color:#555;line-height:1.6}
+
+.review-card{background:#0f0f0f;border:1px solid var(--border);padding:22px;border-radius:var(--r);transition:border-color .2s}
+.review-card:hover{border-color:rgba(212,175,55,.2)}
+.stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:10px}
+.review-text{font-size:13.5px;color:#bbb;line-height:1.65}
+.review-author{font-size:12px;color:#444;margin-top:10px}
+
+.cta-band{background:var(--gold);padding:64px 20px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.05),transparent 50%,rgba(0,0,0,.07))}
+.cta-band-in{position:relative;z-index:1}
+.cta-band h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:800;color:#000;margin-bottom:8px}
+.cta-band p{font-size:15px;margin-bottom:24px;color:rgba(0,0,0,.65)}
+.cta-acts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.cta-btn{padding:12px 26px;border-radius:var(--r-sm);font-size:14px;font-weight:700;transition:all .15s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.cta-btn.dark{background:#000;color:var(--gold)}
+.cta-btn.dark:hover{background:#1a1a1a}
+.cta-btn.outline{background:transparent;border:2px solid rgba(0,0,0,.3);color:#000}
+.cta-btn.outline:hover{background:rgba(0,0,0,.08)}
+
+footer{background:#070707;padding:40px 40px 24px;border-top:1px solid #161616}
+.footer-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:start}
+.f-logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--gold);margin-bottom:8px;letter-spacing:1.5px}
+.f-desc{color:#3a3a3a;font-size:13px;line-height:1.75;max-width:400px}
+.f-contact p{color:#3a3a3a;font-size:13px;line-height:2;text-align:right}
+.f-contact a{color:var(--wa);transition:color .15s}
+.f-contact a:hover{color:#3ddf78}
+.f-bottom{max-width:1100px;margin:20px auto 0;padding-top:18px;border-top:1px solid #111;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.f-bottom p{color:#272727;font-size:12px}
+
+/* ── UPLOAD ── */
+.upload-wrap{max-width:680px;margin:0 auto;padding:52px 24px}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:5px}
+.page-title span{color:var(--gold)}
+.page-sub{color:#555;font-size:13px;margin-bottom:28px}
+.info-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:24px}
+.info-card{background:#111;border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;display:flex;gap:11px}
+.info-card-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.info-card h4{font-size:13px;font-weight:600;color:#ddd;margin-bottom:2px}
+.info-card p{font-size:12px;color:#555;line-height:1.5}
+
+.drop-zone{background:#111;border:2px dashed #252525;border-radius:var(--r);padding:52px 28px;text-align:center;cursor:pointer;transition:all .2s}
+.drop-zone:hover,.drop-zone.drag{border-color:var(--gold);background:rgba(212,175,55,.03)}
+.drop-icon{font-size:40px;margin-bottom:14px;opacity:.55}
+.drop-zone h3{font-size:16px;font-weight:600;margin-bottom:7px;color:#ddd}
+.drop-zone p{color:#555;font-size:13px;margin-bottom:20px}
+.btn-choose{background:var(--gold);color:#000;padding:10px 24px;border-radius:var(--r-sm);font-size:13.5px;font-weight:700;transition:background .15s}
+.btn-choose:hover{background:var(--gold-dim)}
+.sample-link{display:inline-block;margin-top:14px;font-size:12px;color:#444;cursor:pointer;transition:color .15s}
+.sample-link:hover{color:var(--gold)}
+.progress-wrap{height:3px;background:#1a1a1a;border-radius:2px;margin-top:12px;overflow:hidden;display:none}
+.progress-fill{height:100%;background:var(--gold);width:0;transition:width .3s;border-radius:2px}
+
+.mapper-card{background:#111;border:1px solid var(--border);border-radius:var(--r);padding:26px;margin-top:18px;display:none}
+.mapper-card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px}
+.mapper-sub{font-size:13px;color:#555;margin-bottom:20px}
+.mapper-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px}
+.mrow label{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#444;margin-bottom:4px}
+.mrow .req{color:#ef4444}
+.mrow select{width:100%;padding:9px 11px;border:1px solid #1e1e1e;border-radius:var(--r-sm);font-size:13px;background:#0e0e0e;color:#bbb;outline:none;transition:border-color .15s}
+.mrow select:focus{border-color:var(--gold)}
+.mapper-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:#000;padding:10px 24px;border-radius:var(--r-sm);font-size:13.5px;font-weight:700;transition:background .15s}
+.btn-primary:hover{background:var(--gold-dim)}
+.btn-ghost{background:transparent;color:#666;border:1px solid #252525;padding:10px 18px;border-radius:var(--r-sm);font-size:13.5px;transition:all .15s}
+.btn-ghost:hover{background:#161616;color:#eee;border-color:#333}
+
+/* ── CATALOGUE ── */
+.cat-layout{display:grid;grid-template-columns:224px 1fr;min-height:calc(100vh - 64px);align-items:start}
+.sidebar{background:#0d0d0d;border-right:1px solid #1a1a1a;padding:18px 12px;position:sticky;top:64px;max-height:calc(100vh - 64px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:#1e1e1e}
+.sb-sec{margin-bottom:24px}
+.sb-sec h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#2e2e2e;margin-bottom:8px;padding:0 7px}
+.sb-item{display:flex;align-items:center;justify-content:space-between;padding:7px 9px;border-radius:var(--r-sm);cursor:pointer;font-size:13px;color:#666;transition:all .12s;margin-bottom:1px}
+.sb-item:hover{background:#161616;color:#ddd}
+.sb-item.active{background:rgba(212,175,55,.08);color:var(--gold);font-weight:600;border-left:2px solid var(--gold);padding-left:7px}
+.sb-badge{font-size:10px;background:#181818;color:#383838;padding:1px 6px;border-radius:8px;flex-shrink:0}
+.sb-item.active .sb-badge{background:rgba(212,175,55,.12);color:var(--gold)}
+.radio-row{display:flex;align-items:center;gap:8px;padding:5px 7px;border-radius:var(--r-sm);cursor:pointer;font-size:13px;color:#666;transition:background .1s}
+.radio-row:hover{background:#161616;color:#ddd}
+.radio-row input{accent-color:var(--gold);width:13px;height:13px;flex-shrink:0;cursor:pointer}
+.radio-row label{cursor:pointer;line-height:1}
+.price-slider{width:100%;accent-color:var(--gold);margin-top:6px;cursor:pointer}
+.price-lbl{font-size:12px;color:#444;margin-top:4px;padding:0 7px}
+
+/* mobile sidebar drawer */
+.mob-filter-btn{display:none;align-items:center;gap:6px;background:#111;color:#aaa;border:1px solid #222;padding:8px 14px;border-radius:var(--r-sm);font-size:13px;font-weight:600;transition:all .15s}
+.mob-filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+.drawer-bg{display:none;position:fixed;inset:0;z-index:600}
+.drawer-bg.open{display:block}
+.drawer-overlay{position:absolute;inset:0;background:rgba(0,0,0,.7)}
+.drawer-panel{position:absolute;left:0;top:0;bottom:0;width:272px;background:#0d0d0d;border-right:1px solid #252525;overflow-y:auto;padding:18px 12px}
+.drawer-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:0 7px}
+.drawer-hd h3{font-size:14px;font-weight:700;color:#fff}
+.drawer-close{color:#555;font-size:22px;line-height:1;padding:0 4px;transition:color .15s}
+.drawer-close:hover{color:#fff}
+
+@media(max-width:900px){
+  .cat-layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .mob-filter-btn{display:flex}
+}
+
+.cat-main{padding:20px 24px}
+.breadcrumb{display:flex;align-items:center;gap:5px;font-size:12px;color:#333;margin-bottom:16px;flex-wrap:wrap}
+.bc-link{cursor:pointer;color:#666;transition:color .15s}
+.bc-link:hover{color:var(--gold)}
+.bc-sep{color:#222}
+.cat-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.cat-title-lbl{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff}
+.cat-count-lbl{font-size:12px;color:#444;margin-top:2px}
+.topbar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sort-sel{padding:8px 11px;border:1px solid #1e1e1e;border-radius:var(--r-sm);font-size:13px;background:#111;color:#aaa;outline:none;cursor:pointer;transition:border-color .15s}
+.sort-sel:focus{border-color:var(--gold)}
+.view-toggle{display:flex;border:1px solid #1e1e1e;border-radius:var(--r-sm);overflow:hidden}
+.vt{padding:7px 10px;background:#111;color:#444;font-size:14px;transition:all .12s}
+.vt:hover{background:#171717;color:#aaa}
+.vt.active{background:var(--gold);color:#000}
+
+.cat-search-row{margin-bottom:16px}
+.cat-search-in{width:100%;padding:10px 15px;border:1px solid #1e1e1e;border-radius:var(--r-sm);background:#111;color:#fff;font-size:13.5px;outline:none;transition:border-color .15s}
+.cat-search-in:focus{border-color:rgba(212,175,55,.4)}
+.cat-search-in::placeholder{color:#333}
+
+/* active filter chips */
+.filter-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;min-height:0}
+.chip{display:inline-flex;align-items:center;gap:5px;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.18);color:var(--gold);font-size:12px;font-weight:600;padding:3px 10px;border-radius:16px}
+.chip button{color:var(--gold);font-size:14px;line-height:1;padding:0 0 0 2px;opacity:.65;transition:opacity .12s}
+.chip button:hover{opacity:1}
+.chip-clear{font-size:12px;color:#444;cursor:pointer;text-decoration:underline;transition:color .12s;align-self:center}
+.chip-clear:hover{color:var(--gold)}
+
+/* inv bar */
+.inv-bar{background:#0a1a0d;border:1px solid rgba(34,197,94,.14);border-radius:var(--r-sm);padding:9px 15px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.inv-bar-info{font-size:12.5px;color:#5a9}
+.inv-bar-info strong{color:#22c55e}
+.inv-bar-acts{display:flex;gap:7px}
+.btn-sm{font-size:12px;font-weight:600;padding:5px 12px;border-radius:var(--r-sm);border:1px solid;transition:all .15s}
+.btn-sm.blue{color:#60a5fa;border-color:rgba(96,165,250,.2);background:rgba(96,165,250,.05)}
+.btn-sm.blue:hover{background:rgba(96,165,250,.12)}
+.btn-sm.red{color:#f87171;border-color:rgba(248,113,113,.2);background:rgba(248,113,113,.05)}
+.btn-sm.red:hover{background:rgba(248,113,113,.12)}
+
+/* parts grid/list */
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:14px}
+.part-card{background:#111;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .18s,box-shadow .18s}
+.part-card:hover{border-color:rgba(212,175,55,.38);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.card-top{height:96px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #1a1a1a;position:relative;font-size:38px}
+.cond-pill{position:absolute;top:7px;left:7px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:2px 8px;border-radius:3px}
+.cn{background:rgba(34,197,94,.13);color:#22c55e}
+.co{background:rgba(59,130,246,.13);color:#60a5fa}
+.cr{background:rgba(245,158,11,.13);color:#fbbf24}
+.ca{background:rgba(168,85,247,.13);color:#c084fc}
+.cd{background:rgba(255,255,255,.05);color:#555}
+.card-body{padding:13px;flex:1;display:flex;flex-direction:column}
+.card-sku{font-size:10px;font-weight:700;letter-spacing:.7px;color:#444;text-transform:uppercase;margin-bottom:4px}
+.card-sku span{color:var(--gold);user-select:all}
+.card-name{font-size:14px;font-weight:600;margin-bottom:7px;color:#eee;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-brand-span{color:var(--gold);font-weight:700;margin-right:3px}
+.card-specs{padding-top:7px;border-top:1px solid #1c1c1c;margin-bottom:10px;display:flex;flex-direction:column;gap:3px}
+.spec-l{font-size:11px;color:#555;display:flex;align-items:center;gap:4px}
+
+/* brand pills on grouped cards */
+.alt-section{margin:7px 0}
+.alt-label{font-size:10px;color:#444;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+.alt-pills{display:flex;flex-wrap:wrap;gap:4px}
+.alt-pill{font-size:11px;padding:3px 9px;border-radius:10px;background:rgba(212,175,55,.07);color:var(--gold);font-weight:600;border:1px solid rgba(212,175,55,.14);transition:all .12s}
+.alt-pill:hover,.alt-pill.on{background:var(--gold);color:#000;border-color:var(--gold)}
+
+.card-price{font-size:19px;font-weight:700;color:var(--gold);margin-bottom:3px;letter-spacing:-.3px}
+.card-stock{font-size:11px;margin-bottom:12px}
+.s-ok{color:#22c55e}.s-low{color:#f59e0b}.s-out{color:#ef4444}
+.card-acts{display:flex;gap:7px;margin-top:auto}
+.btn-quote{flex:1;padding:9px 0;background:var(--gold);color:#000;border-radius:var(--r-sm);font-size:12.5px;font-weight:700;transition:background .15s}
+.btn-quote:hover{background:var(--gold-dim)}
+.btn-wa-sm{padding:9px 11px;background:var(--wa);color:#fff;border-radius:var(--r-sm);transition:background .15s;display:flex;align-items:center;justify-content:center}
+.btn-wa-sm:hover{background:var(--wa-hover)}
+.btn-wa-sm svg{width:14px;height:14px;fill:#fff;display:block}
+
+/* list view */
+.parts-list{display:flex;flex-direction:column;gap:7px}
+.part-row{background:#111;border:1px solid var(--border);border-radius:var(--r);display:grid;grid-template-columns:44px 1fr auto auto;align-items:center;gap:12px;padding:12px 15px;transition:border-color .15s}
+.part-row:hover{border-color:rgba(212,175,55,.28)}
+.row-icon{font-size:24px;text-align:center}
+.row-name{font-size:13.5px;font-weight:600;color:#eee;margin-bottom:2px}
+.row-sku{font-size:10.5px;color:#383838;font-family:monospace;margin-bottom:4px}
+.row-meta{font-size:11.5px;color:#444;display:flex;gap:10px;flex-wrap:wrap}
+.row-meta strong{color:#666;font-weight:600}
+.row-price{font-size:16px;font-weight:700;color:var(--gold);white-space:nowrap;text-align:right}
+.row-stk{font-size:11px;margin-top:2px;text-align:right}
+.row-acts{display:flex;gap:5px}
+.btn-q-row{padding:7px 13px;background:var(--gold);color:#000;border-radius:var(--r-sm);font-size:12px;font-weight:700;white-space:nowrap;transition:background .15s}
+.btn-q-row:hover{background:var(--gold-dim)}
+.btn-wa-row{padding:7px 9px;background:var(--wa);color:#fff;border-radius:var(--r-sm);transition:background .15s;display:flex;align-items:center}
+.btn-wa-row:hover{background:var(--wa-hover)}
+.btn-wa-row svg{width:13px;height:13px;fill:#fff;display:block}
+
+/* pagination */
+.pagination{display:flex;align-items:center;justify-content:center;gap:4px;margin-top:28px;flex-wrap:wrap;padding-bottom:16px}
+.pg{padding:6px 12px;border:1px solid #1c1c1c;border-radius:var(--r-sm);background:#111;font-size:13px;color:#444;transition:all .12s;min-width:34px;text-align:center}
+.pg:hover:not([disabled]){border-color:rgba(212,175,55,.3);color:var(--gold)}
+.pg.on{background:var(--gold);color:#000;border-color:var(--gold);font-weight:700}
+.pg[disabled]{opacity:.2;cursor:default}
+.pg-dots{color:#2a2a2a;padding:0 2px;font-size:14px}
+
+.no-results{text-align:center;padding:64px 20px;color:#333}
+.no-results .nri{font-size:40px;margin-bottom:12px;opacity:.35}
+.no-results h3{font-size:15px;color:#666;margin-bottom:5px}
+.no-results p{font-size:13px}
+.no-results a{color:var(--gold);cursor:pointer}
+
+/* ── QUOTE MODAL ── */
+.backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:800;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.backdrop.open{display:flex}
+.modal{background:#141414;border:1px solid #242424;border-radius:var(--r);width:100%;max-width:430px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 56px rgba(0,0,0,.8)}
+.modal::-webkit-scrollbar{width:3px}
+.modal::-webkit-scrollbar-thumb{background:#252525}
+.modal-hd{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 0}
+.modal-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:800;color:#fff}
+.modal-close{color:#444;font-size:22px;line-height:1;padding:2px 5px;transition:color .15s}
+.modal-close:hover{color:#fff}
+.modal-part-tag{margin:12px 22px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.1);border-radius:var(--r-sm);padding:9px 12px;font-size:12px;color:#999;display:flex;align-items:center;gap:7px}
+.modal-part-tag strong{color:var(--gold)}
+.modal-body{padding:0 22px 22px}
+.form-note{font-size:11.5px;color:#3a3a3a;background:#0d0d0d;border:1px solid #181818;border-radius:var(--r-xs);padding:8px 10px;margin-bottom:12px;line-height:1.5}
+.frow{margin-bottom:12px}
+.frow label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#444;margin-bottom:4px}
+.frow input,.frow textarea{width:100%;padding:10px 12px;border:1px solid #1c1c1c;border-radius:var(--r-sm);background:#0e0e0e;color:#eee;font-size:13.5px;outline:none;transition:border-color .15s}
+.frow input:focus,.frow textarea:focus{border-color:rgba(212,175,55,.38);background:#111}
+.frow input::placeholder,.frow textarea::placeholder{color:#2e2e2e}
+.frow textarea{height:68px;resize:vertical}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.modal-acts{display:flex;gap:7px;margin-top:4px}
+.btn-send{flex:1;padding:11px;background:var(--gold);color:#000;border-radius:var(--r-sm);font-size:13.5px;font-weight:800;transition:background .15s}
+.btn-send:hover{background:var(--gold-dim)}
+.btn-wa-md{padding:11px 12px;background:var(--wa);color:#fff;border-radius:var(--r-sm);transition:background .15s;display:flex;align-items:center;justify-content:center}
+.btn-wa-md:hover{background:var(--wa-hover)}
+.btn-wa-md svg{width:18px;height:18px;fill:#fff;display:block}
+.btn-cancel{padding:11px 14px;background:transparent;color:#444;border:1px solid #1c1c1c;border-radius:var(--r-sm);font-size:13px;transition:all .15s}
+.btn-cancel:hover{background:#111;color:#bbb}
+.success-scr{text-align:center;padding:48px 22px;display:none}
+.success-scr .si{font-size:46px;margin-bottom:14px}
+.success-scr h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:7px}
+.success-scr p{color:#555;font-size:13px;line-height:1.7}
+
+/* ── DUPLICATE MODAL ── */
+.dup-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:900;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.dup-backdrop.open{display:flex}
+.dup-modal{background:#141414;border:1px solid #272727;border-radius:var(--r);width:100%;max-width:640px;max-height:88vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.85)}
+.dup-modal::-webkit-scrollbar{width:3px}
+.dup-modal::-webkit-scrollbar-thumb{background:#252525}
+.dup-hd{padding:20px 22px 16px;border-bottom:1px solid #1e1e1e;position:sticky;top:0;background:#141414;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.dup-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:800;color:#fff;margin-bottom:3px}
+.dup-hd p{font-size:12px;color:#555}
+.dup-body{padding:18px 22px}
+.dup-sec{margin-bottom:24px}
+.dup-sec:last-child{margin-bottom:0}
+.dup-sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:5px 10px;border-radius:var(--r-xs);margin-bottom:10px}
+.dst-conflict{color:#f87171;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.13)}
+.dst-alt{color:#60a5fa;background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.13)}
+.dup-group{background:#0e0e0e;border:1px solid #1e1e1e;border-radius:var(--r-sm);margin-bottom:9px;overflow:hidden}
+.dup-grp-hd{padding:9px 13px;border-bottom:1px solid #171717;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.dg-name{font-size:13px;font-weight:600;color:#ddd}
+.dg-num{font-size:11.5px;color:#444;font-family:monospace}
+.dg-badge{font-size:10px;background:#1a1a1a;color:#444;padding:2px 7px;border-radius:8px}
+.dup-rows{padding:9px 13px;display:flex;flex-direction:column;gap:7px}
+.dup-row{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:var(--r-sm);border:1px solid #1e1e1e;background:#111;cursor:pointer;transition:all .13s}
+.dup-row:hover{border-color:#2e2e2e;background:#161616}
+.dup-row.sel{border-color:rgba(212,175,55,.35);background:rgba(212,175,55,.05)}
+.dup-row.keep{cursor:default;border-color:#1a1a1a}
+.dup-row input[type=radio]{accent-color:var(--gold);width:13px;height:13px;flex-shrink:0}
+.dup-row-info{flex:1;min-width:0}
+.dr-brand{font-size:13px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:7px}
+.dr-meta{font-size:11px;color:#444;margin-top:2px}
+.dr-meta span{margin-right:8px}
+.dr-price{font-size:13px;font-weight:700;color:#eee;white-space:nowrap;margin-left:auto}
+.tag-low{font-size:9.5px;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:rgba(34,197,94,.12);color:#22c55e}
+.tag-high{font-size:9.5px;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:#f87171}
+.dup-ft{padding:14px 22px 18px;border-top:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;bottom:0;background:#141414}
+.dup-ft-info{font-size:12px;color:#444}
+.dup-ft-info strong{color:#aaa}
+.dup-ft-acts{display:flex;gap:8px}
+
+/* ── ABOUT PAGE ── */
+.about-hero{
+  position:relative;padding:100px 20px 88px;text-align:center;overflow:hidden;
+  background:linear-gradient(160deg,#060606 0%,#0e0e0e 45%,#151208 100%);
+}
+.about-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(212,175,55,.08) 0%,transparent 68%);
+  pointer-events:none;
+}
+.about-hero::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,.25),transparent);
+}
+.about-hero-in{position:relative;z-index:1;max-width:740px;margin:0 auto}
+.about-hero-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.18);
+  color:var(--gold);font-size:11.5px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:22px;
+}
+.about-hero h1{
+  font-family:'Barlow Condensed',sans-serif;font-size:54px;font-weight:800;
+  line-height:1;margin-bottom:16px;letter-spacing:.5px;
+}
+.about-hero h1 span{color:var(--gold)}
+.about-hero p{font-size:17px;color:#aaa;line-height:1.7;max-width:580px;margin:0 auto 28px}
+.about-hero-acts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.btn-gold{
+  background:var(--gold);color:#000;padding:12px 28px;border-radius:var(--r-sm);
+  font-size:14px;font-weight:700;transition:background .15s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-gold:hover{background:var(--gold-dim)}
+.btn-outline-gold{
+  background:transparent;color:var(--gold);border:1.5px solid rgba(212,175,55,.4);
+  padding:12px 26px;border-radius:var(--r-sm);font-size:14px;font-weight:600;
+  transition:all .15s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-outline-gold:hover{background:var(--gold-pale);border-color:var(--gold)}
+
+/* who we are */
+.who-section{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  background:#0b0b0b;border-top:1px solid #161616;border-bottom:1px solid #161616;
+}
+.who-img{
+  position:relative;background:#0e0e0e;
+  display:flex;align-items:center;justify-content:center;
+  min-height:420px;overflow:hidden;border-right:1px solid #1a1a1a;
+}
+.who-img-inner{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#0d0d0d 0%,#161208 50%,#0d0d0d 100%);
+  position:relative;
+}
+.who-img-gfx{
+  display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:32px;width:100%;max-width:400px;
+}
+.who-img-tile{
+  aspect-ratio:1;background:#111;border:1px solid #222;border-radius:var(--r-sm);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:28px;gap:6px;transition:border-color .2s;
+}
+.who-img-tile:hover{border-color:rgba(212,175,55,.3)}
+.who-img-tile span{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#555}
+.who-img-badge{
+  position:absolute;bottom:28px;right:28px;
+  background:var(--gold);color:#000;
+  font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;
+  padding:12px 18px;border-radius:var(--r-sm);line-height:1.1;text-align:center;
+  box-shadow:0 8px 24px rgba(212,175,55,.35);
+}
+.who-img-badge small{display:block;font-size:10px;font-weight:700;letter-spacing:.5px;opacity:.75;margin-top:2px}
+.who-text{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.who-text .section-tag{
+  display:inline-flex;align-items:center;gap:6px;color:var(--gold);
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+  margin-bottom:16px;
+}
+.who-text h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:800;
+  color:#fff;line-height:1.05;margin-bottom:16px;
+}
+.who-text h2 span{color:var(--gold)}
+.who-text p{font-size:14.5px;color:#888;line-height:1.8;margin-bottom:14px}
+.who-checks{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.who-check{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:#bbb}
+.who-check-icon{
+  width:22px;height:22px;border-radius:50%;background:rgba(212,175,55,.12);
+  border:1px solid rgba(212,175,55,.2);display:flex;align-items:center;justify-content:center;
+  font-size:11px;flex-shrink:0;margin-top:1px;
+}
+
+/* stats counter */
+.stats-band{
+  background:#0e0e0e;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;
+  padding:52px 40px;
+}
+.stats-band-in{max-width:1100px;margin:0 auto}
+.stats-band h3{
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.2px;color:#333;text-align:center;margin-bottom:36px;
+}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#1a1a1a;border:1px solid #1a1a1a;border-radius:var(--r)}
+.stat-box{
+  background:#0e0e0e;padding:32px 20px;text-align:center;
+  transition:background .2s;
+}
+.stat-box:first-child{border-radius:var(--r) 0 0 var(--r)}
+.stat-box:last-child{border-radius:0 var(--r) var(--r) 0}
+.stat-box:hover{background:#111}
+.stat-box-num{
+  font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:800;
+  color:var(--gold);line-height:1;margin-bottom:6px;
+}
+.stat-box-num sup{font-size:24px;vertical-align:super}
+.stat-box-label{font-size:12px;color:#444;text-transform:uppercase;letter-spacing:.7px;line-height:1.5}
+
+/* car brands we cover */
+.brands-section{padding:72px 40px;background:#0b0b0b}
+.brands-section .section-hd{margin-bottom:36px}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.brand-card{
+  background:#0e0e0e;border:1px solid #1e1e1e;border-radius:var(--r);
+  padding:28px 24px;position:relative;overflow:hidden;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.brand-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .25s ease;
+}
+.brand-card:hover{border-color:rgba(212,175,55,.3);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.brand-card:hover::before{transform:scaleX(1)}
+.brand-card-flag{font-size:32px;margin-bottom:14px}
+.brand-card h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:.3px}
+.brand-card p{font-size:13px;color:#555;line-height:1.65;margin-bottom:16px}
+.brand-tags{display:flex;flex-wrap:wrap;gap:5px}
+.brand-tag{
+  font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;
+  background:rgba(212,175,55,.07);color:var(--gold);border:1px solid rgba(212,175,55,.13);
+}
+
+/* parts categories strip */
+.parts-strip{background:#0d0d0d;border-top:1px solid #161616;border-bottom:1px solid #161616;padding:64px 40px}
+.parts-strip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:28px}
+.part-type-card{
+  background:#111;border:1px solid #1e1e1e;border-radius:var(--r-sm);
+  padding:20px 14px;text-align:center;cursor:pointer;
+  transition:all .18s;
+}
+.part-type-card:hover{border-color:rgba(212,175,55,.35);background:#151515;transform:translateY(-2px)}
+.part-type-card .ptc-icon{font-size:26px;margin-bottom:8px}
+.part-type-card .ptc-name{font-size:12.5px;font-weight:600;color:#ccc}
+
+/* values */
+.values-section{padding:72px 40px}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:32px}
+.value-card{
+  background:#0f0f0f;border:1px solid #1e1e1e;border-radius:var(--r);
+  padding:28px 22px;transition:border-color .2s;
+}
+.value-card:hover{border-color:rgba(212,175,55,.2)}
+.value-num{
+  font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:800;
+  color:rgba(212,175,55,.12);line-height:1;margin-bottom:12px;
+}
+.value-card h3{font-size:15px;font-weight:700;color:#eee;margin-bottom:8px}
+.value-card p{font-size:13px;color:#555;line-height:1.65}
+
+/* testimonials */
+.testi-section{background:#0d0d0d;border-top:1px solid #161616;padding:72px 40px}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:32px}
+.testi-card{
+  background:#111;border:1px solid #1e1e1e;border-radius:var(--r);padding:24px;
+  transition:border-color .2s;position:relative;
+}
+.testi-card:hover{border-color:rgba(212,175,55,.2)}
+.testi-quote{
+  position:absolute;top:18px;right:20px;
+  font-size:48px;color:rgba(212,175,55,.07);font-family:Georgia,serif;line-height:1;
+}
+.testi-stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:10px}
+.testi-text{font-size:13.5px;color:#aaa;line-height:1.7;margin-bottom:14px}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--gold-pale);border:1px solid rgba(212,175,55,.2);
+  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--gold);flex-shrink:0;
+}
+.testi-name{font-size:13px;font-weight:600;color:#eee}
+.testi-role{font-size:11.5px;color:#444}
+
+/* contact strip */
+.contact-strip{
+  background:var(--gold);padding:60px 40px;text-align:center;position:relative;overflow:hidden;
+}
+.contact-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.05),transparent 50%,rgba(0,0,0,.07))}
+.contact-strip-in{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.contact-strip h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:800;color:#000;margin-bottom:8px}
+.contact-strip p{font-size:15px;color:rgba(0,0,0,.65);margin-bottom:28px}
+.contact-details{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin-bottom:28px}
+.contact-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#000}
+.contact-item a{color:#000;transition:opacity .15s}
+.contact-item a:hover{opacity:.7}
+.contact-strip-acts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.csa-dark{background:#000;color:var(--gold);padding:12px 26px;border-radius:var(--r-sm);font-size:14px;font-weight:700;transition:background .15s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.csa-dark:hover{background:#1a1a1a}
+.csa-outline{background:transparent;border:2px solid rgba(0,0,0,.3);color:#000;padding:12px 24px;border-radius:var(--r-sm);font-size:14px;font-weight:700;transition:all .15s;display:inline-flex;align-items:center;gap:8px}
+.csa-outline:hover{background:rgba(0,0,0,.08)}
+
+/* about responsive */
+@media(max-width:960px){
+  .who-section{grid-template-columns:1fr}
+  .who-img{min-height:280px;border-right:none;border-bottom:1px solid #1a1a1a}
+  .who-text{padding:36px 28px}
+  .brands-grid{grid-template-columns:1fr 1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .stat-box:nth-child(2){border-radius:0 var(--r-sm) 0 0}
+  .stat-box:nth-child(3){border-radius:0 0 0 var(--r-sm)}
+  .stat-box:last-child{border-radius:0 0 var(--r-sm) 0}
+  .stat-box:first-child{border-radius:var(--r-sm) 0 0 0}
+}
+@media(max-width:600px){
+  .about-hero h1{font-size:36px}
+  .about-hero{padding:72px 16px 64px}
+  .brands-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .brands-section,.parts-strip,.values-section,.testi-section,.stats-band{padding:48px 16px}
+  .who-text{padding:28px 20px}
+  .contact-strip{padding:48px 16px}
+  .contact-details{gap:16px;flex-direction:column;align-items:center}
+}
+
+  .hero h1{font-size:34px}
+  .hero{padding:68px 16px 60px}
+  .section{padding:44px 16px}
+  .stats-bar{gap:28px;padding:16px}
+  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(135px,1fr))}
+  footer{padding:32px 18px 20px}
+  .footer-in{grid-template-columns:1fr;gap:20px}
+  .f-contact p{text-align:left}
+  .f-bottom{flex-direction:column;gap:3px}
+  .cta-band{padding:48px 16px}
+  .two-col{grid-template-columns:1fr}
+  .part-row{grid-template-columns:1fr auto;gap:8px}
+  .row-icon{display:none}
+  .row-acts{flex-direction:column}
+}
+
+/* ── KNOW MY CAR PAGE ── */
+.kmc-page{background:#0b0b0b;min-height:100vh}
+.kmc-hero{
+  padding:64px 20px 52px;text-align:center;
+  background:linear-gradient(160deg,#060606,#0e0e0e 50%,#111 100%);
+  border-bottom:1px solid #1a1a1a;position:relative;overflow:hidden;
+}
+.kmc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(212,175,55,.07),transparent 68%);pointer-events:none}
+.kmc-hero-in{position:relative;z-index:1;max-width:720px;margin:0 auto}
+.kmc-hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.18);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:18px}
+.kmc-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:800;line-height:1;margin-bottom:12px}
+.kmc-hero h1 span{color:var(--gold)}
+.kmc-hero p{font-size:15px;color:#888;max-width:520px;margin:0 auto 28px;line-height:1.65}
+
+/* vehicle selector */
+.kmc-selector{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.kmc-sel-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
+.kmc-sel{padding:9px 16px;border:1px solid #252525;border-radius:var(--r-sm);background:#111;color:#aaa;font-size:13px;outline:none;cursor:pointer;transition:border-color .15s;min-width:140px}
+.kmc-sel:focus{border-color:var(--gold)}
+.kmc-sel-btn{padding:9px 22px;background:var(--gold);color:#000;border-radius:var(--r-sm);font-size:13px;font-weight:700;transition:background .15s}
+.kmc-sel-btn:hover{background:var(--gold-dim)}
+
+/* system tabs */
+.kmc-tabs-wrap{background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:0 32px;overflow-x:auto;white-space:nowrap}
+.kmc-tabs{display:inline-flex;gap:0}
+.kmc-tab{padding:16px 22px;font-size:13px;font-weight:600;color:#555;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;cursor:pointer}
+.kmc-tab:hover{color:#ccc}
+.kmc-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.kmc-tab-icon{margin-right:7px;font-size:14px}
+
+/* main diagram area */
+.kmc-body{display:grid;grid-template-columns:1fr 320px;min-height:calc(100vh - 260px);align-items:start}
+.kmc-diagram-area{padding:32px;border-right:1px solid #1a1a1a;position:relative}
+.kmc-diagram-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.kmc-diagram-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff}
+.kmc-diagram-sub{font-size:12px;color:#444;margin-top:2px}
+.kmc-hint{font-size:12px;color:#555;display:flex;align-items:center;gap:6px;background:#111;border:1px solid #1e1e1e;padding:7px 12px;border-radius:var(--r-sm)}
+
+/* SVG diagram canvas */
+.diagram-canvas-wrap{
+  background:#0d0d0d;border:1px solid #1e1e1e;border-radius:var(--r);
+  position:relative;overflow:hidden;min-height:520px;
+  display:flex;align-items:center;justify-content:center;
+}
+.diagram-canvas-wrap svg{width:100%;height:auto;max-height:600px}
+
+/* hotspot dots on diagram */
+.hs-dot{
+  position:absolute;width:22px;height:22px;border-radius:50%;
+  background:rgba(212,175,55,.15);border:2px solid var(--gold);
+  cursor:pointer;transform:translate(-50%,-50%);
+  transition:all .18s;display:flex;align-items:center;justify-content:center;
+  z-index:10;
+}
+.hs-dot::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);display:block;transition:transform .18s}
+.hs-dot:hover,.hs-dot.active{background:var(--gold);box-shadow:0 0 0 6px rgba(212,175,55,.15)}
+.hs-dot:hover::after,.hs-dot.active::after{background:#000;transform:scale(1.2)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.4)}50%{box-shadow:0 0 0 8px rgba(212,175,55,0)}}
+.hs-dot{animation:pulse 2.5s ease-in-out infinite}
+.hs-dot.active{animation:none}
+
+/* callout labels on SVG */
+.hs-label{
+  position:absolute;transform:translate(-50%,-50%);
+  background:#0d0d0d;border:1px solid #2a2a2a;
+  border-radius:3px;font-size:9.5px;font-weight:700;
+  color:#888;padding:2px 6px;white-space:nowrap;pointer-events:none;z-index:8;
+  letter-spacing:.3px;
+}
+
+/* sidebar parts panel */
+.kmc-sidebar{background:#0d0d0d;padding:24px 20px;position:sticky;top:64px;max-height:calc(100vh - 64px);overflow-y:auto;display:flex;flex-direction:column;gap:16px}
+.kmc-sidebar::-webkit-scrollbar{width:3px}
+.kmc-sidebar::-webkit-scrollbar-thumb{background:#1e1e1e}
+.kmc-part-detail{background:#111;border:1px solid #1e1e1e;border-radius:var(--r);padding:18px;display:none}
+.kmc-part-detail.visible{display:block}
+.kmc-part-num{font-size:11px;font-weight:700;letter-spacing:.8px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;font-family:monospace}
+.kmc-part-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25}
+.kmc-part-desc{font-size:13px;color:#666;line-height:1.65;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #1a1a1a}
+.kmc-part-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.kmc-meta-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
+.kmc-meta-row .mk{color:#444}
+.kmc-meta-row .mv{color:#ccc;font-weight:600}
+.kmc-meta-row .mv.gold{color:var(--gold);font-size:15px;font-weight:700}
+.kmc-part-acts{display:flex;flex-direction:column;gap:8px}
+.kmc-btn-quote{padding:11px;background:var(--gold);color:#000;border-radius:var(--r-sm);font-size:13.5px;font-weight:800;transition:background .15s;text-align:center}
+.kmc-btn-quote:hover{background:var(--gold-dim)}
+.kmc-btn-wa{padding:10px;background:var(--wa);color:#fff;border-radius:var(--r-sm);font-size:13px;font-weight:600;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:7px}
+.kmc-btn-wa:hover{background:var(--wa-hover)}
+.kmc-btn-wa svg{width:14px;height:14px;fill:#fff}
+.kmc-empty{text-align:center;padding:28px 16px;color:#333}
+.kmc-empty-icon{font-size:32px;margin-bottom:10px;opacity:.4}
+.kmc-empty p{font-size:13px;line-height:1.6;color:#444}
+
+/* parts list below diagram */
+.kmc-parts-list{margin-top:24px}
+.kmc-parts-list h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#333;margin-bottom:12px}
+.kmc-list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.kmc-list-item{
+  background:#111;border:1px solid #1e1e1e;border-radius:var(--r-sm);
+  padding:9px 12px;cursor:pointer;transition:all .15s;
+  display:flex;align-items:center;gap:8px;
+}
+.kmc-list-item:hover,.kmc-list-item.active{border-color:rgba(212,175,55,.35);background:#151515}
+.kmc-list-dot{width:8px;height:8px;border-radius:50%;background:#2a2a2a;flex-shrink:0;transition:background .15s}
+.kmc-list-item:hover .kmc-list-dot,.kmc-list-item.active .kmc-list-dot{background:var(--gold)}
+.kmc-list-pnum{font-size:10px;font-weight:700;color:var(--gold);font-family:monospace;display:block}
+.kmc-list-pname{font-size:11.5px;color:#888;display:block;margin-top:1px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+@media(max-width:960px){
+  .kmc-body{grid-template-columns:1fr}
+  .kmc-sidebar{position:static;max-height:none;border-top:1px solid #1a1a1a;border-right:none}
+  .kmc-diagram-area{border-right:none;padding:20px 16px}
+}
+@media(max-width:600px){
+  .kmc-hero h1{font-size:34px}
+  .kmc-hero{padding:48px 16px 40px}
+  .kmc-tabs-wrap{padding:0 8px}
+  .kmc-tab{padding:14px 14px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOAST CONTAINER -->
+<div id="toasts" aria-live="polite"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo" id="logo-btn">
+    <span class="logo-dot"></span>
+    <span>ASHS</span>
+    <span class="logo-text-full" style="font-size:13px;color:#555;font-family:'Barlow',sans-serif;font-weight:400;letter-spacing:0;margin-left:2px">Autoserve</span>
+  </div>
+  <nav id="main-nav">
+    <button id="nav-home" class="active">Home</button>
+    <button id="nav-catalogue">Catalogue</button>
+    <button id="nav-kmc">Know My Car</button>
+    <button id="nav-about">About Us</button>
+    <button id="nav-upload">Upload Stock</button>
+  </nav>
+  <div class="hdr-right">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+    <a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer" class="wa-btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ═══ HOME ═══ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-in">
+      <div class="hero-tag">🇰🇪 Kenya's Spare Parts Specialists</div>
+      <h1>AUTOSERVE &amp;<br><span>HARDWARE SUPPLIES</span></h1>
+      <p>Genuine OEM and aftermarket spare parts for Toyota, Nissan, Isuzu, Subaru and more — delivered across Kenya.</p>
+      <div class="hero-sub">Search by part name, part number, or vehicle type</div>
+      <div class="search-box">
+        <input type="text" id="home-search" placeholder="e.g. 04465-0K240, Brake Pad, Hilux, Vigo..." aria-label="Search spare parts">
+        <button id="home-search-btn">Search Parts</button>
+      </div>
+      <div class="hero-badges">
+        <span>📦 <strong>M-Pesa</strong> &amp; nationwide delivery</span>
+        <span>⚡ <strong>Fast quotes</strong> via WhatsApp</span>
+        <span>🔩 <strong>OEM, aftermarket</strong> &amp; reconditioned</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-num" id="stat-count">4+</div><div class="stat-label">Parts in Catalogue</div></div>
+    <div class="stat-item"><div class="stat-num">OEM</div><div class="stat-label">Genuine Spec Parts</div></div>
+    <div class="stat-item"><div class="stat-num">Nairobi</div><div class="stat-label">Central Hub</div></div>
+    <div class="stat-item"><div class="stat-num">M-Pesa</div><div class="stat-label">Easy Payments</div></div>
+  </div>
+
+  <section class="section">
+    <div class="section-hd">
+      <div><h2>Browse by Category</h2><div class="section-sub">Select a category to filter the parts catalogue</div></div>
+      <span class="section-link" id="view-all-link">View all →</span>
+    </div>
+    <div class="cat-grid" id="home-cats"></div>
+  </section>
+
+  <section class="section" style="background:#0d0d0d;border-top:1px solid #161616;border-bottom:1px solid #161616">
+    <div class="section-hd"><div><h2>Why Order From Us?</h2><div class="section-sub">Built for mechanics, fleet managers, and vehicle owners across Kenya</div></div></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">⚙️</div><div class="why-text"><h3>Pinpoint Compatibility</h3><p>Search by engine code, chassis number, or vehicle model to find exactly the right part.</p></div></div>
+      <div class="why-card"><div class="why-icon">🚚</div><div class="why-text"><h3>Nationwide Delivery</h3><p>We ship from our Nairobi hub to anywhere in Kenya via local courier.</p></div></div>
+      <div class="why-card"><div class="why-icon">✅</div><div class="why-text"><h3>Verified Fitment</h3><p>Provide your chassis number and our technical team confirms fitment before you order.</p></div></div>
+      <div class="why-card"><div class="why-icon">💬</div><div class="why-text"><h3>WhatsApp Support</h3><p>Get instant quotes and availability checks directly on WhatsApp — no waiting on hold.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-hd"><div><h2>What Our Customers Say</h2><div class="section-sub">Trusted by mechanics, fleet operators and car owners across Kenya</div></div></div>
+    <div class="why-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">Got my Toyota 1KD engine gasket matched perfectly down to spec. Fast response, genuine part.</div><div class="review-author">— J. Mwangi, Mechanics Hub Nairobi</div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">Found a rare Nissan X-Trail part I couldn't get anywhere else in Nakuru. Delivered in two days.</div><div class="review-author">— Peter K., Nakuru</div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">Our fleet garage uses Autoserve exclusively for Isuzu parts. Consistent quality and easy WhatsApp ordering.</div><div class="review-author">— D. Otieno, Fleet Manager Kisumu</div></div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="cta-band-in">
+      <h2>Can't Find What You Need?</h2>
+      <p>Send us your chassis number and we'll find the exact part for your vehicle.</p>
+      <div class="cta-acts">
+        <a href="https://wa.me/254799495876?text=Hello%20Autoserve%2C%20I%20need%20help%20finding%20a%20part." target="_blank" rel="noopener noreferrer" class="cta-btn dark">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+          WhatsApp Us Now
+        </a>
+        <button class="cta-btn outline" id="cta-browse-btn">Browse Catalogue</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-in">
+      <div>
+        <div class="f-logo">AUTOSERVE &amp; HARDWARE SUPPLIES LTD</div>
+        <p class="f-desc">Genuine OEM, aftermarket and reconditioned spare parts for Toyota, Nissan, Subaru, Mazda, Isuzu, Mercedes and more. Serving Kenya.</p>
+      </div>
+      <div class="f-contact">
+        <p>📞 <strong style="color:#bbb">0799 495 876</strong></p>
+        <p><a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer">WhatsApp Orders</a></p>
+        <p style="color:#2e2e2e">M-Pesa · Nationwide Delivery</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>© 2025 Autoserve &amp; Hardware Supplies Ltd. All rights reserved.</p>
+      <p style="color:#1e1e1e">Kenya Registered Business</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="page" id="page-about">
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero-in">
+      <div class="about-hero-tag">🇰🇪 Nairobi, Kenya · Est. 2005</div>
+      <h1>YOUR TRUSTED<br><span>SPARE PARTS</span> PARTNER</h1>
+      <p>Autoserve & Hardware Supplies Ltd is a direct importer, wholesaler and retailer of genuine OEM, aftermarket and reconditioned motor vehicle spare parts — serving mechanics, fleet managers and vehicle owners across Kenya for over 20 years.</p>
+      <div class="about-hero-acts">
+        <button class="btn-gold" id="about-browse-btn">Browse Catalogue</button>
+        <a href="https://wa.me/254799495876?text=Hello%20Autoserve%2C%20I%20would%20like%20to%20enquire%20about%20your%20parts." target="_blank" rel="noopener noreferrer" class="btn-outline-gold">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="who-section">
+    <div class="who-img">
+      <div class="who-img-inner">
+        <div class="who-img-gfx">
+          <div class="who-img-tile">🔩<span>Brakes</span></div>
+          <div class="who-img-tile">⚡<span>Electrical</span></div>
+          <div class="who-img-tile">⚙️<span>Engine</span></div>
+          <div class="who-img-tile">🛞<span>Steering</span></div>
+        </div>
+        <div class="who-img-badge">20+<small>Years of Service</small></div>
+      </div>
+    </div>
+    <div class="who-text">
+      <div class="section-tag">▪ Who We Are</div>
+      <h2>Nairobi's <span>Spare Parts</span><br>Specialists</h2>
+      <p>We are a direct importer and retailer of motor vehicle spare parts, strategically located in Nairobi's Central Business District. Our inventory spans thousands of parts for the most popular vehicle makes driven across East Africa.</p>
+      <p>From individual car owners to large fleet operators, we've built lasting relationships with our clients by consistently delivering on quality, availability and price.</p>
+      <div class="who-checks">
+        <div class="who-check"><div class="who-check-icon">✓</div>Direct importer — no middlemen, better prices</div>
+        <div class="who-check"><div class="who-check-icon">✓</div>Genuine OEM, aftermarket and reconditioned parts</div>
+        <div class="who-check"><div class="who-check-icon">✓</div>Technical team confirms fitment before dispatch</div>
+        <div class="who-check"><div class="who-check-icon">✓</div>M-Pesa payments &amp; nationwide courier delivery</div>
+        <div class="who-check"><div class="who-check-icon">✓</div>WhatsApp ordering — fast quotes, no waiting</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Band -->
+  <section class="stats-band">
+    <div class="stats-band-in">
+      <h3>By the numbers</h3>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-num">20<sup>+</sup></div>
+          <div class="stat-box-label">Years in Business</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="ab-stat-parts">4<sup>+</sup></div>
+          <div class="stat-box-label">Parts in Catalogue</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">47<sup>+</sup></div>
+          <div class="stat-box-label">Counties Served</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">5K<sup>+</sup></div>
+          <div class="stat-box-label">Happy Customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Brands We Cover -->
+  <section class="brands-section">
+    <div class="section-hd">
+      <div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--gold)">Vehicle Brands We Cover</h2>
+        <div class="section-sub">Parts sourced and stocked for the most popular vehicles in Kenya</div>
+      </div>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <div class="brand-card-flag">🇯🇵</div>
+        <h3>Japanese Vehicles</h3>
+        <p>The backbone of Kenyan roads. We carry an extensive range of parts for Japan's most trusted brands — from Hilux to Harrier.</p>
+        <div class="brand-tags">
+          <span class="brand-tag">Toyota</span>
+          <span class="brand-tag">Nissan</span>
+          <span class="brand-tag">Isuzu</span>
+          <span class="brand-tag">Subaru</span>
+          <span class="brand-tag">Honda</span>
+          <span class="brand-tag">Mitsubishi</span>
+          <span class="brand-tag">Mazda</span>
+          <span class="brand-tag">Suzuki</span>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-flag">🇩🇪</div>
+        <h3>German Vehicles</h3>
+        <p>Precision engineering demands precision parts. We stock genuine and OEM-spec components for Germany's premium marques.</p>
+        <div class="brand-tags">
+          <span class="brand-tag">Mercedes-Benz</span>
+          <span class="brand-tag">BMW</span>
+          <span class="brand-tag">Volkswagen</span>
+          <span class="brand-tag">Audi</span>
+          <span class="brand-tag">Porsche</span>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-flag">🌍</div>
+        <h3>Commercial &amp; Heavy Duty</h3>
+        <p>Keeping fleets moving. Lorries, buses, matatus and construction equipment — we source hard-to-find commercial parts fast.</p>
+        <div class="brand-tags">
+          <span class="brand-tag">Hino</span>
+          <span class="brand-tag">Mitsubishi Fuso</span>
+          <span class="brand-tag">Tata</span>
+          <span class="brand-tag">Iveco</span>
+          <span class="brand-tag">MAN</span>
+          <span class="brand-tag">Scania</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parts Categories Strip -->
+  <section class="parts-strip">
+    <div class="section-hd">
+      <div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--gold)">What We Stock</h2>
+        <div class="section-sub">Thousands of parts across every major category</div>
+      </div>
+    </div>
+    <div class="parts-strip-grid">
+      <div class="part-type-card" data-cat="Brakes"><div class="ptc-icon">🛑</div><div class="ptc-name">Brakes</div></div>
+      <div class="part-type-card" data-cat="Filters"><div class="ptc-icon">🌪️</div><div class="ptc-name">Filters</div></div>
+      <div class="part-type-card" data-cat="Engine"><div class="ptc-icon">📦</div><div class="ptc-name">Engine Parts</div></div>
+      <div class="part-type-card" data-cat="Suspension"><div class="ptc-icon">🔩</div><div class="ptc-name">Suspension</div></div>
+      <div class="part-type-card" data-cat="Electrical"><div class="ptc-icon">⚡</div><div class="ptc-name">Electrical</div></div>
+      <div class="part-type-card" data-cat="Clutch"><div class="ptc-icon">⚙️</div><div class="ptc-name">Clutch</div></div>
+      <div class="part-type-card" data-cat="Steering"><div class="ptc-icon">🛞</div><div class="ptc-name">Steering</div></div>
+      <div class="part-type-card" data-cat="Cooling"><div class="ptc-icon">❄️</div><div class="ptc-name">Cooling</div></div>
+      <div class="part-type-card" data-cat="Fuel"><div class="ptc-icon">⛽</div><div class="ptc-name">Fuel System</div></div>
+      <div class="part-type-card" data-cat="Body"><div class="ptc-icon">🚗</div><div class="ptc-name">Body Parts</div></div>
+      <div class="part-type-card" data-cat="Bearings"><div class="ptc-icon">🔘</div><div class="ptc-name">Bearings</div></div>
+      <div class="part-type-card" data-cat="Gaskets"><div class="ptc-icon">🔲</div><div class="ptc-name">Gaskets</div></div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="values-section">
+    <div class="section-hd">
+      <div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--gold)">Our Commitments</h2>
+        <div class="section-sub">What drives every order we process</div>
+      </div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <h3>Quality Assurance</h3>
+        <p>Every part we supply is inspected before dispatch. We carry OEM, genuine and reputable aftermarket brands — never counterfeits.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <h3>Fitment Guarantee</h3>
+        <p>Provide your chassis number or engine code and our technical team will verify the exact part for your vehicle before it ships.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <h3>Fair Pricing</h3>
+        <p>As a direct importer with no middlemen, we pass the cost savings on to you. Competitive prices with no hidden charges.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">04</div>
+        <h3>Fast Turnaround</h3>
+        <p>Nairobi same-day delivery available. Upcountry shipments dispatched same business day via our trusted courier partners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testi-section">
+    <div class="section-hd">
+      <div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--gold)">What Our Customers Say</h2>
+        <div class="section-sub">Trusted by mechanics, fleet operators and car owners across Kenya</div>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Got my Toyota 1KD engine gasket matched perfectly to spec. Gave them the chassis number in the morning, part was delivered to my garage in Nairobi by afternoon. Exactly what I needed.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JM</div>
+          <div><div class="testi-name">James Mwangi</div><div class="testi-role">Workshop Owner, Nairobi</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Found a rare Nissan X-Trail part I'd been searching for two weeks. They sourced it, confirmed fitment, and delivered to Nakuru in two days. Exceptional service.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PK</div>
+          <div><div class="testi-name">Peter Kamau</div><div class="testi-role">Car Owner, Nakuru</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">We manage a fleet of 28 Isuzu trucks. Autoserve has been our exclusive parts supplier for three years — consistent quality, honest pricing, and the WhatsApp ordering system saves us hours every week.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">DO</div>
+          <div><div class="testi-name">David Otieno</div><div class="testi-role">Fleet Manager, Kisumu</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Strip -->
+  <section class="contact-strip">
+    <div class="contact-strip-in">
+      <h2>Get In Touch</h2>
+      <p>We're available Monday to Saturday, 8am – 6pm. WhatsApp queries answered seven days a week.</p>
+      <div class="contact-details">
+        <div class="contact-item">📞 <a href="tel:+254799495876">0799 495 876</a></div>
+        <div class="contact-item">💬 <a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer">WhatsApp Orders</a></div>
+        <div class="contact-item">📍 Nairobi CBD, Kenya</div>
+      </div>
+      <div class="contact-strip-acts">
+        <a href="https://wa.me/254799495876?text=Hello%20Autoserve%2C%20I%20need%20help%20finding%20a%20part." target="_blank" rel="noopener noreferrer" class="csa-dark">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="csa-outline" id="about-catalogue-btn">Browse Catalogue</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-in">
+      <div>
+        <div class="f-logo">AUTOSERVE &amp; HARDWARE SUPPLIES LTD</div>
+        <p class="f-desc">Genuine OEM, aftermarket and reconditioned spare parts for Toyota, Nissan, Subaru, Mazda, Isuzu, Mercedes and more. Serving Kenya.</p>
+      </div>
+      <div class="f-contact">
+        <p>📞 <strong style="color:#bbb">0799 495 876</strong></p>
+        <p><a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer">WhatsApp Orders</a></p>
+        <p style="color:#2e2e2e">M-Pesa · Nationwide Delivery</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>© 2025 Autoserve &amp; Hardware Supplies Ltd. All rights reserved.</p>
+      <p style="color:#1e1e1e">Kenya Registered Business</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ KNOW MY CAR ═══ -->
+<div class="page kmc-page" id="page-kmc">
+
+  <section class="kmc-hero">
+    <div class="kmc-hero-in">
+      <div class="kmc-hero-tag">🔍 Interactive Parts Finder</div>
+      <h1>KNOW YOUR<br><span>CAR PARTS</span></h1>
+      <p>Select your vehicle, pick a system, then tap any highlighted component to see its part number, description and get an instant quote.</p>
+      <div class="kmc-sel-row">
+        <select class="kmc-sel" id="kmc-make">
+          <option value="">Select Make</option>
+          <option value="toyota">Toyota</option>
+          <option value="nissan">Nissan</option>
+          <option value="isuzu">Isuzu</option>
+          <option value="subaru">Subaru</option>
+          <option value="mitsubishi">Mitsubishi</option>
+        </select>
+        <select class="kmc-sel" id="kmc-model">
+          <option value="">Select Model</option>
+        </select>
+        <select class="kmc-sel" id="kmc-year">
+          <option value="">Year</option>
+        </select>
+        <button class="kmc-sel-btn" id="kmc-go-btn">View Diagrams</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="kmc-tabs-wrap">
+    <div class="kmc-tabs" id="kmc-tabs">
+      <div class="kmc-tab active" data-sys="engine"><span class="kmc-tab-icon">📦</span>Engine Block</div>
+      <div class="kmc-tab" data-sys="brakes"><span class="kmc-tab-icon">🛑</span>Brake System</div>
+      <div class="kmc-tab" data-sys="suspension"><span class="kmc-tab-icon">🔩</span>Suspension</div>
+      <div class="kmc-tab" data-sys="filters"><span class="kmc-tab-icon">🌪️</span>Filters &amp; Service</div>
+      <div class="kmc-tab" data-sys="steering"><span class="kmc-tab-icon">🛞</span>Steering</div>
+    </div>
+  </div>
+
+  <div class="kmc-body">
+    <!-- Diagram area -->
+    <div class="kmc-diagram-area">
+      <div class="kmc-diagram-header">
+        <div>
+          <div class="kmc-diagram-title" id="kmc-sys-title">Engine Block & Oil Pan</div>
+          <div class="kmc-diagram-sub" id="kmc-sys-sub">Toyota 1NZ-FE · NCP20 Series</div>
+        </div>
+        <div class="kmc-hint">💡 Tap any <span style="color:var(--gold);font-weight:700">●</span> hotspot to inspect the part</div>
+      </div>
+
+      <!-- Diagram canvas with SVG + hotspots -->
+      <div class="diagram-canvas-wrap" id="diagram-canvas">
+        <!-- SVG and hotspots injected by JS -->
+      </div>
+
+      <!-- Parts index list below diagram -->
+      <div class="kmc-parts-list">
+        <h3>All Parts in This Diagram</h3>
+        <div class="kmc-list-grid" id="kmc-list-grid"></div>
+      </div>
+    </div>
+
+    <!-- Sidebar detail panel -->
+    <aside class="kmc-sidebar">
+      <div class="kmc-empty" id="kmc-empty-state">
+        <div class="kmc-empty-icon">👆</div>
+        <p>Tap any highlighted dot on the diagram to view part details, check availability and request a quote.</p>
+      </div>
+      <div class="kmc-part-detail" id="kmc-part-detail">
+        <div class="kmc-part-num" id="kd-num"></div>
+        <div class="kmc-part-name" id="kd-name"></div>
+        <div class="kmc-part-desc" id="kd-desc"></div>
+        <div class="kmc-part-meta">
+          <div class="kmc-meta-row"><span class="mk">Category</span><span class="mv" id="kd-cat"></span></div>
+          <div class="kmc-meta-row"><span class="mk">Fits</span><span class="mv" id="kd-fits"></span></div>
+          <div class="kmc-meta-row"><span class="mk">Condition</span><span class="mv" id="kd-cond"></span></div>
+          <div class="kmc-meta-row"><span class="mk">Est. Price</span><span class="mv gold" id="kd-price"></span></div>
+        </div>
+        <div class="kmc-part-acts">
+          <button class="kmc-btn-quote" id="kd-quote-btn">Get Quote for This Part</button>
+          <button class="kmc-btn-wa" id="kd-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+            Enquire on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Related parts from catalogue -->
+      <div id="kmc-related-wrap" style="display:none">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#333;margin-bottom:10px">In Your Catalogue</div>
+        <div id="kmc-related-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer style="background:#070707;padding:24px 32px;border-top:1px solid #111;text-align:center">
+    <p style="color:#222;font-size:12px">Autoserve &amp; Hardware Supplies Ltd &nbsp;·&nbsp; 0799 495 876 &nbsp;·&nbsp; <a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer" style="color:var(--wa)">WhatsApp</a></p>
+  </footer>
+</div>
+
+<!-- ═══ UPLOAD ═══ -->
+<div class="page" id="page-upload">
+  <div class="upload-wrap">
+    <h2 class="page-title">Upload <span>Inventory</span></h2>
+    <p class="page-sub">Import your parts list from a CSV file. We'll walk you through matching your columns.</p>
+    <div class="info-cards">
+      <div class="info-card"><div class="info-card-icon">📄</div><div><h4>CSV Format</h4><p>Standard comma-separated file with a header row.</p></div></div>
+      <div class="info-card"><div class="info-card-icon">🔗</div><div><h4>Column Mapping</h4><p>After upload you'll match your headers to catalogue fields.</p></div></div>
+      <div class="info-card"><div class="info-card-icon">💾</div><div><h4>Saved Locally</h4><p>Your inventory is saved in this browser between sessions.</p></div></div>
+    </div>
+    <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-label="Upload CSV file">
+      <div class="drop-icon">📂</div>
+      <h3>Drag &amp; Drop your CSV here</h3>
+      <p>or click to browse your files</p>
+      <button class="btn-choose" id="browse-btn" type="button">Choose File</button>
+      <br>
+      <span class="sample-link" id="sample-link">↓ Download sample CSV template</span>
+    </div>
+    <input type="file" id="file-input" accept=".csv" style="display:none">
+    <div class="progress-wrap" id="progress-wrap"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="mapper-card" id="mapper-card">
+      <h3>Map Your Columns</h3>
+      <div class="mapper-sub" id="mapper-sub">Match your CSV headers to the fields below. Fields marked * are required.</div>
+      <div class="mapper-grid" id="mapper-grid"></div>
+      <div class="mapper-actions">
+        <button class="btn-primary" id="import-btn">Import Parts</button>
+        <button class="btn-ghost" id="reset-btn">Start Over</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CATALOGUE ═══ -->
+<div class="page" id="page-catalogue">
+  <div class="cat-layout">
+    <!-- Desktop sidebar -->
+    <aside class="sidebar" id="desktop-sidebar">
+      <div class="sb-sec">
+        <h4>Category</h4>
+        <div id="sb-cats"></div>
+      </div>
+      <div class="sb-sec">
+        <h4>Condition</h4>
+        <div id="sb-conds"></div>
+      </div>
+      <div class="sb-sec">
+        <h4>Max Price (KES)</h4>
+        <input type="range" class="price-slider" id="price-slider" min="0" max="50000" step="500" value="50000" aria-label="Max price">
+        <div class="price-lbl" id="price-lbl">No limit</div>
+      </div>
+    </aside>
+
+    <main class="cat-main">
+      <div class="breadcrumb">
+        <span class="bc-link" id="bc-home">Home</span>
+        <span class="bc-sep">/</span>
+        <span style="color:#555">Catalogue</span>
+      </div>
+      <div class="cat-topbar">
+        <div>
+          <div class="cat-title-lbl" id="cat-title">All Parts</div>
+          <div class="cat-count-lbl" id="cat-count"></div>
+        </div>
+        <div class="topbar-right">
+          <button class="mob-filter-btn" id="mob-filter-btn">⚙ Filters</button>
+          <select class="sort-sel" id="sort-sel" aria-label="Sort">
+            <option value="name">Name A–Z</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+          </select>
+          <div class="view-toggle" role="group">
+            <button class="vt active" id="vt-grid" aria-label="Grid view">⊞</button>
+            <button class="vt" id="vt-list" aria-label="List view">☰</button>
+          </div>
+        </div>
+      </div>
+      <input type="text" class="cat-search-in" id="cat-search" placeholder="Search by name, part number, vehicle or brand..." aria-label="Search parts">
+      <div class="filter-chips" id="filter-chips"></div>
+      <div class="inv-bar" id="inv-bar" style="display:none">
+        <div class="inv-bar-info" id="inv-bar-info-text"></div>
+        <div class="inv-bar-acts" id="inv-bar-acts"></div>
+      </div>
+      <div id="parts-container"></div>
+      <div class="pagination" id="pagination"></div>
+    </main>
+  </div>
+  <footer style="background:#070707;padding:20px 32px;border-top:1px solid #111;text-align:center">
+    <p style="color:#222;font-size:12px">Autoserve &amp; Hardware Supplies Ltd &nbsp;·&nbsp; 0799 495 876 &nbsp;·&nbsp; <a href="https://wa.me/254799495876" target="_blank" rel="noopener noreferrer" style="color:var(--wa)">WhatsApp</a></p>
+  </footer>
+</div>
+
+<!-- Mobile filter drawer -->
+<div class="drawer-bg" id="drawer-bg">
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-hd">
+      <h3>Filters</h3>
+      <button class="drawer-close" id="drawer-close">×</button>
+    </div>
+    <div class="sb-sec"><h4>Category</h4><div id="mob-cats"></div></div>
+    <div class="sb-sec"><h4>Condition</h4><div id="mob-conds"></div></div>
+    <div class="sb-sec">
+      <h4>Max Price (KES)</h4>
+      <input type="range" class="price-slider" id="price-slider-mob" min="0" max="50000" step="500" value="50000" aria-label="Max price">
+      <div class="price-lbl" id="price-lbl-mob">No limit</div>
+    </div>
+    <div style="padding:0 7px;margin-top:14px">
+      <button class="btn-primary" style="width:100%" id="apply-filters-btn">Apply Filters</button>
+    </div>
+  </div>
+</div>
+
+<!-- Quote modal -->
+<div class="backdrop" id="backdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Request a quote">
+    <div id="modal-main">
+      <div class="modal-hd">
+        <h2>Request a Quote</h2>
+        <button class="modal-close" id="modal-close">×</button>
+      </div>
+      <div class="modal-part-tag">🔩 <span id="modal-part-lbl"></span></div>
+      <div class="modal-body">
+        <div class="form-note">Fill in your details and tap "Send via WhatsApp" to open a pre-filled message you can send directly.</div>
+        <div class="frow"><label>Your Name *</label><input id="q-name" placeholder="e.g. John Kamau" autocomplete="name"></div>
+        <div class="frow"><label>Phone / WhatsApp *</label><input id="q-phone" placeholder="+254 7XX XXX XXX" type="tel" autocomplete="tel"></div>
+        <div class="frow"><label>Email (optional)</label><input id="q-email" placeholder="you@email.com" type="email" autocomplete="email"></div>
+        <div class="two-col">
+          <div class="frow"><label>Quantity</label><input type="number" id="q-qty" value="1" min="1"></div>
+          <div class="frow"><label>Brand Preference</label><input id="q-brand" placeholder="Any"></div>
+        </div>
+        <div class="frow"><label>Notes</label><textarea id="q-msg" placeholder="Vehicle model, year, any other details…"></textarea></div>
+        <div class="modal-acts">
+          <button class="btn-cancel" id="modal-cancel">Cancel</button>
+          <button class="btn-send" id="modal-send">Send via WhatsApp</button>
+          <button class="btn-wa-md" id="modal-wa" aria-label="Send via WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="success-scr" id="modal-success">
+      <div class="si">✅</div>
+      <h3>Request Sent!</h3>
+      <p>Your quote has been sent via WhatsApp. Our team will reply shortly with pricing and availability.</p>
+      <button class="btn-primary" style="margin-top:18px" id="modal-done">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate review modal -->
+<div class="dup-backdrop" id="dup-backdrop">
+  <div class="dup-modal" role="dialog" aria-modal="true" aria-label="Review duplicate parts">
+    <div class="dup-hd">
+      <div><h2>Review Duplicates</h2><p id="dup-summary"></p></div>
+      <button class="modal-close" id="dup-skip">Skip</button>
+    </div>
+    <div class="dup-body" id="dup-body"></div>
+    <div class="dup-ft">
+      <div class="dup-ft-info" id="dup-ft-info"></div>
+      <div class="dup-ft-acts">
+        <button class="btn-ghost" id="dup-import-as-is">Import As-Is</button>
+        <button class="btn-primary" id="dup-apply">Apply &amp; Import</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════════
+   CONSTANTS
+════════════════════════════════════════ */
+const WA = '254799495876';
+const STORE_KEY = 'ashs_v2';
+
+/* ── GOOGLE SHEET DATA SOURCE ──
+   Paste your "Publish to web" CSV link here. Leave empty to disable.
+   Format: https://docs.google.com/spreadsheets/d/e/XXXXXXXX/pub?output=csv
+   Sheet columns expected (row 1 headers, any order):
+   Name, SKU, Category, Brand, Price, Vehicle Type, Engine Code, Condition, Stock, Notes
+*/
+const SHEET_URL = '';
+const PAGE_SIZE = 24;
+
+const WASVG = `<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.986c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.008 0C5.402 0 .034 5.368.031 11.977c0 2.112.551 4.175 1.6 5.996L0 24l6.18-1.62a11.83 11.83 0 005.823 1.523h.005c6.604 0 11.974-5.368 11.978-11.979A11.77 11.77 0 0020.47 3.488z"/></svg>`;
+
+const CAT_ICONS = {brake:'🛑',filter:'🌪️',electrical:'⚡',suspension:'🔩',engine:'📦',clutch:'⚙️',steering:'🛞',body:'🚗',cooling:'❄️',fuel:'⛽'};
+function catIcon(c){ const l=String(c||'').toLowerCase(); for(const k in CAT_ICONS) if(l.includes(k)) return CAT_ICONS[k]; return '🔧'; }
+
+const FIELDS = [
+  {key:'name',     label:'Part Name',        req:true},
+  {key:'number',   label:'Part Number / SKU', req:false},
+  {key:'category', label:'Category',          req:false},
+  {key:'brand',    label:'Brand',             req:false},
+  {key:'vehicle',  label:'Vehicle Type',      req:false},
+  {key:'engine',   label:'Engine Code',       req:false},
+  {key:'condition',label:'Condition',         req:false},
+  {key:'price',    label:'Price (KES)',        req:false},
+  {key:'stock',    label:'Stock Quantity',    req:false},
+  {key:'desc',     label:'Notes',             req:false},
+];
+
+/* ════════════════════════════════════════
+   STATE
+════════════════════════════════════════ */
+let FLAT   = [];   // raw flat parts array
+let GROUPS = [];   // grouped by part number (for display)
+let CATS   = {};
+let CONDS  = {};
+
+let fCat    = 'ALL';
+let fCond   = 'ALL';
+let fPriceMax = Infinity;
+let fSearch = '';
+let sortMode = 'name';
+let viewMode = 'grid';
+let curPage  = 1;
+let activeModal = null;   // part id for quote modal
+
+// CSV import state
+let csvHeaders = [];
+let csvRows    = [];
+let pendingImport = [];
+let dupConflicts  = [];
+let dupAlts       = [];
+
+/* ════════════════════════════════════════
+   INIT
+════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+  wireNav();
+  wireUpload();
+  wireCatalogue();
+  wireModals();
+
+  loadInitialData();
+});
+
+function loadInitialData() {
+  if (SHEET_URL) {
+    fetchFromSheet(SHEET_URL, true);
+    return;
+  }
+  const saved = storageGet();
+  if (saved && saved.length) {
+    ingest(saved);
+  } else {
+    ingest(mockData());
+  }
+}
+
+/* ── GOOGLE SHEET FETCH ── */
+function fetchFromSheet(url, isInitial) {
+  if (!isInitial) toast('Refreshing catalogue from Google Sheet…', 'info', 2500);
+  fetch(url, {cache: 'no-store'})
+    .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.text(); })
+    .then(text => {
+      const parsed = parseSheetCSV(text);
+      if (!parsed.length) throw new Error('No rows found in sheet');
+      ingest(parsed);
+      sheetSyncOK = true;
+      updateInvBar();
+      if (!isInitial) toast(`Catalogue updated — ${parsed.length} parts loaded from Google Sheet.`, 'success', 4000);
+    })
+    .catch(err => {
+      sheetSyncOK = false;
+      console.error('Sheet fetch failed:', err);
+      if (isInitial) {
+        // Fall back to localStorage, then mock data
+        const saved = storageGet();
+        if (saved && saved.length) ingest(saved);
+        else ingest(mockData());
+        toast('Could not load live catalogue — showing saved/sample data.', 'error', 5000);
+      } else {
+        toast('Could not refresh from Google Sheet. Check the link and try again.', 'error', 5000);
+      }
+      updateInvBar();
+    });
+}
+
+/* Parse Google Sheet CSV export and map directly to FLAT format
+   using same header-matching logic as the CSV import mapper. */
+function parseSheetCSV(text) {
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l.length);
+  if (!lines.length) return [];
+  const headers = parseCSVLine(lines[0]);
+
+  // Auto-map headers to our field keys (same heuristic as showMapper)
+  const fieldMap = {};
+  FIELDS.forEach(f => {
+    const match = headers.find(h => {
+      const hn = h.toLowerCase().replace(/[\s_\-]/g, '');
+      const fk = f.key.toLowerCase();
+      return hn === fk || hn.includes(fk) || fk.includes(hn.slice(0,4));
+    });
+    if (match) fieldMap[f.key] = match;
+  });
+
+  const out = [];
+  for (let i = 1; i < lines.length; i++) {
+    const vals = parseCSVLine(lines[i]);
+    if (!vals.length) continue;
+    const row = {};
+    headers.forEach((h, idx) => { row[h] = (vals[idx] || '').trim(); });
+
+    const name = fieldMap.name ? (row[fieldMap.name] || '').trim() : '';
+    if (!name) continue;
+
+    const price = fieldMap.price ? parseFloat(String(row[fieldMap.price] || '').replace(/[^0-9.]/g,'')) : NaN;
+    const stock = fieldMap.stock ? parseInt(String(row[fieldMap.stock] || '').replace(/[^0-9]/g,''))   : NaN;
+
+    out.push({
+      id:        `sheet-${i}`,
+      name,
+      number:    fieldMap.number    ? row[fieldMap.number]    || '' : '',
+      category:  fieldMap.category  ? row[fieldMap.category]  || 'General' : 'General',
+      brand:     fieldMap.brand     ? row[fieldMap.brand]     || '' : '',
+      vehicle:   fieldMap.vehicle   ? row[fieldMap.vehicle]   || '' : '',
+      engine:    fieldMap.engine    ? row[fieldMap.engine]    || '' : '',
+      condition: fieldMap.condition ? row[fieldMap.condition] || 'New' : 'New',
+      price:     isNaN(price) ? null : price,
+      stock:     isNaN(stock) ? 5    : stock,
+      desc:      fieldMap.desc      ? row[fieldMap.desc]      || '' : '',
+    });
+  }
+  return out;
+}
+let sheetSyncOK = null; // null = no sheet configured, true/false = last sync result
+
+function mockData() {
+  return [
+    {id:'p1',  name:'Front Brake Pad Set',       number:'04465-0K240',  category:'Brakes',  brand:'Genuine', vehicle:'Toyota Hilux Vigo', engine:'2KD-FTV', condition:'New',         price:10000, stock:8,  desc:'OEM front brake pads'},
+    {id:'p1b', name:'Front Brake Pad Set',       number:'04465-0K240',  category:'Brakes',  brand:'Frotise', vehicle:'Toyota Hilux Vigo', engine:'2KD-FTV', condition:'Aftermarket',  price:5500,  stock:12, desc:'Aftermarket alternative'},
+    {id:'p1c', name:'Front Brake Pad Set',       number:'04465-0K240',  category:'Brakes',  brand:'Akebono', vehicle:'Toyota Hilux Vigo', engine:'2KD-FTV', condition:'OEM',          price:8200,  stock:4,  desc:'OEM spec brake pads'},
+    {id:'p2',  name:'Engine Air Filter Element', number:'17801-30060',  category:'Filters', brand:'Kowa',    vehicle:'Isuzu TFR',         engine:'4HG1',    condition:'OEM',          price:900,   stock:25, desc:'High-flow air filter element'},
+    {id:'p3',  name:'Brake Booster Assembly',    number:'44610-0K030',  category:'Brakes',  brand:'Frotise', vehicle:'Toyota Hilux',      engine:'1KD',     condition:'New',          price:12000, stock:3,  desc:'Hydraulic brake booster'},
+    {id:'p4',  name:'Fuel Filter Unit',          number:'23303-64010',  category:'Filters', brand:'Genuine', vehicle:'Toyota Corolla',    engine:'3ZZ',     condition:'New',          price:4500,  stock:14, desc:'Inline fuel filter'},
+  ];
+}
+
+/* ════════════════════════════════════════
+   NAVIGATION  — all wired via JS, no inline handlers
+════════════════════════════════════════ */
+function wireNav() {
+  document.getElementById('nav-kmc').addEventListener('click',        () => showPage('kmc'));
+  document.getElementById('nav-about').addEventListener('click',      () => showPage('about'));
+
+  // about page buttons
+  document.getElementById('about-browse-btn').addEventListener('click',    () => showPage('catalogue'));
+  document.getElementById('about-catalogue-btn').addEventListener('click', () => showPage('catalogue'));
+
+  // about page parts-strip category tiles
+  document.querySelectorAll('.part-type-card').forEach(tile => {
+    tile.addEventListener('click', () => {
+      fCat = tile.dataset.cat;
+      document.getElementById('cat-title').textContent = fCat;
+      buildSidebars(); showPage('catalogue'); renderCatalogue();
+    });
+  });
+
+  document.getElementById('logo-btn').addEventListener('click',       () => showPage('home'));
+  document.getElementById('nav-home').addEventListener('click',       () => showPage('home'));
+  document.getElementById('nav-catalogue').addEventListener('click',  () => showPage('catalogue'));
+  document.getElementById('nav-upload').addEventListener('click',     () => showPage('upload'));
+  document.getElementById('menu-toggle').addEventListener('click',    toggleMobileNav);
+
+  // home page buttons
+  document.getElementById('home-search-btn').addEventListener('click', doHomeSearch);
+  document.getElementById('home-search').addEventListener('keydown', e => { if (e.key === 'Enter') doHomeSearch(); });
+  document.getElementById('view-all-link').addEventListener('click',   () => showPage('catalogue'));
+  document.getElementById('cta-browse-btn').addEventListener('click',  () => showPage('catalogue'));
+
+  // close mobile nav on outside click
+  document.addEventListener('click', e => {
+    const nav = document.getElementById('main-nav');
+    const tog = document.getElementById('menu-toggle');
+    if (!nav.contains(e.target) && !tog.contains(e.target) && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      tog.textContent = '☰';
+    }
+  });
+}
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('#main-nav button').forEach(b => b.classList.remove('active'));
+  const nb = document.getElementById('nav-' + id);
+  if (nb) nb.classList.add('active');
+  // close mobile nav
+  const nav = document.getElementById('main-nav');
+  nav.classList.remove('open');
+  document.getElementById('menu-toggle').textContent = '☰';
+  window.scrollTo(0, 0);
+}
+
+function toggleMobileNav() {
+  const nav = document.getElementById('main-nav');
+  const tog = document.getElementById('menu-toggle');
+  const open = nav.classList.toggle('open');
+  tog.textContent = open ? '✕' : '☰';
+  tog.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
+/* ════════════════════════════════════════
+   UPLOAD — all wired via JS
+════════════════════════════════════════ */
+function wireUpload() {
+  const dz  = document.getElementById('drop-zone');
+  const fi  = document.getElementById('file-input');
+  const btn = document.getElementById('browse-btn');
+  const sl  = document.getElementById('sample-link');
+
+  // open file picker
+  btn.addEventListener('click', e => { e.stopPropagation(); fi.click(); });
+  dz.addEventListener('click', e => { if (e.target !== btn && e.target !== sl) fi.click(); });
+  dz.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fi.click(); } });
+
+  // file selected
+  fi.addEventListener('change', () => { if (fi.files.length) handleFile(fi.files[0]); fi.value = ''; });
+
+  // drag and drop
+  ['dragenter','dragover'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('drag'); }));
+  dz.addEventListener('dragleave', e => { if (!dz.contains(e.relatedTarget)) dz.classList.remove('drag'); });
+  dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag'); if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]); });
+  document.addEventListener('dragover', e => e.preventDefault());
+  document.addEventListener('drop',     e => { if (!dz.contains(e.target)) e.preventDefault(); });
+
+  // sample download
+  sl.addEventListener('click', e => { e.stopPropagation(); downloadSample(); });
+
+  // mapper actions
+  document.getElementById('import-btn').addEventListener('click', runImport);
+  document.getElementById('reset-btn').addEventListener('click',  resetUpload);
+}
+
+function handleFile(file) {
+  if (!file.name.toLowerCase().endsWith('.csv')) { toast('Please upload a .csv file.', 'error'); return; }
+  const pw = document.getElementById('progress-wrap');
+  const pf = document.getElementById('progress-fill');
+  pw.style.display = 'block'; pf.style.width = '30%';
+  const reader = new FileReader();
+  reader.onerror = () => toast('Could not read the file. Please try again.', 'error');
+  reader.onload  = e => {
+    pf.style.width = '75%';
+    parseCSV(e.target.result);
+    pf.style.width = '100%';
+    setTimeout(() => { pw.style.display = 'none'; pf.style.width = '0'; }, 400);
+  };
+  reader.readAsText(file);
+}
+
+function parseCSV(text) {
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l.length);
+  if (!lines.length) { toast('The file appears to be empty.', 'error'); return; }
+  csvHeaders = parseCSVLine(lines[0]);
+  csvRows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const vals = parseCSVLine(lines[i]);
+    if (vals.length) {
+      const obj = {};
+      csvHeaders.forEach((h, idx) => { obj[h] = (vals[idx] || '').trim(); });
+      csvRows.push(obj);
+    }
+  }
+  if (!csvRows.length) { toast('No data rows found in the file.', 'error'); return; }
+  showMapper();
+}
+
+function parseCSVLine(line) {
+  const arr = []; let cur = ''; let inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') { if (inQ && line[i+1] === '"') { cur += '"'; i++; } else { inQ = !inQ; } }
+    else if (c === ',' && !inQ) { arr.push(cur.trim()); cur = ''; }
+    else { cur += c; }
+  }
+  arr.push(cur.trim());
+  return arr;
+}
+
+function showMapper() {
+  document.getElementById('mapper-sub').textContent = `${csvRows.length} rows loaded. Map your column headers to the fields below.`;
+  const opts = ['— skip —', ...csvHeaders];
+  document.getElementById('mapper-grid').innerHTML = FIELDS.map(f => {
+    const auto = csvHeaders.find(h => {
+      const hn = h.toLowerCase().replace(/[\s_\-]/g, '');
+      const fk = f.key.toLowerCase();
+      return hn === fk || hn.includes(fk) || fk.includes(hn.slice(0,4));
+    }) || '';
+    return `<div class="mrow">
+      <label>${esc(f.label)}${f.req ? ' <span class="req">*</span>' : ''}</label>
+      <select id="map-${f.key}">
+        ${opts.map(o => `<option value="${esc(o)}"${o===auto?' selected':''}>${esc(o)}</option>`).join('')}
+      </select>
+    </div>`;
+  }).join('');
+  document.getElementById('mapper-card').style.display = 'block';
+}
+
+function resetUpload() {
+  document.getElementById('mapper-card').style.display = 'none';
+  csvHeaders = []; csvRows = [];
+}
+
+function runImport() {
+  const map = {};
+  FIELDS.forEach(f => {
+    const v = document.getElementById('map-' + f.key).value;
+    if (v && v !== '— skip —') map[f.key] = v;
+  });
+  if (!map.name) { toast('Part Name is required — please map a column to "Part Name".', 'error'); return; }
+
+  const formatted = [];
+  csvRows.forEach((row, i) => {
+    const name = (row[map.name] || '').trim();
+    if (!name) return;
+    const price = map.price ? parseFloat(String(row[map.price] || '').replace(/[^0-9.]/g,'')) : NaN;
+    const stock = map.stock ? parseInt(String(row[map.stock] || '').replace(/[^0-9]/g,''))   : NaN;
+    formatted.push({
+      id:        `imp-${Date.now()}-${i}`,
+      name,
+      number:    map.number    ? row[map.number]    || '' : '',
+      category:  map.category  ? row[map.category]  || 'General' : 'General',
+      brand:     map.brand     ? row[map.brand]     || '' : '',
+      vehicle:   map.vehicle   ? row[map.vehicle]   || '' : '',
+      engine:    map.engine    ? row[map.engine]    || '' : '',
+      condition: map.condition ? row[map.condition] || 'New' : 'New',
+      price:     isNaN(price)  ? null : price,
+      stock:     isNaN(stock)  ? 5    : stock,
+      desc:      map.desc      ? row[map.desc]      || '' : '',
+    });
+  });
+
+  if (!formatted.length) { toast('No valid rows found after mapping.', 'error'); return; }
+
+  const hasDups = detectDuplicates(formatted);
+  if (hasDups) {
+    pendingImport = formatted;
+    showDupModal();
+  } else {
+    finalizeImport(formatted);
+  }
+}
+
+function downloadSample() {
+  const rows = [
+    ['Name','SKU','Category','Brand','Price','Vehicle Type','Engine Code','Condition','Stock','Notes'],
+    ['Front Brake Pad Set','04465-0K240','Brakes','Genuine','10000','Toyota Hilux Vigo','2KD-FTV','New','8','OEM front brake pads'],
+    ['Engine Air Filter','17801-30060','Filters','Kowa','900','Isuzu TFR','4HG1','OEM','25','High-flow element'],
+    ['Brake Booster Assembly','44610-0K030','Brakes','Frotise','12000','Toyota Hilux','1KD','New','3','Hydraulic booster'],
+    ['Fuel Filter Unit','23303-64010','Filters','Genuine','4500','Toyota Corolla','3ZZ','New','14','Inline fuel filter'],
+    ['Clutch Disc Set','31250-12182','Clutch','Aisin','8500','Toyota Corolla','4ZZ','New','6','OEM clutch disc'],
+    ['Power Steering Pump','44310-06011','Steering','Denso','22000','Toyota Land Cruiser','1HD-T','Reconditioned','2','Rebuilt unit'],
+  ];
+  const csv = 'data:text/csv;charset=utf-8,' + rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = encodeURI(csv); a.download = 'Autoserve_Parts_Template.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+/* ════════════════════════════════════════
+   DUPLICATE DETECTION
+════════════════════════════════════════ */
+function detectDuplicates(data) {
+  const byNum = {};
+  data.forEach(p => {
+    const k = (p.number || '__noskU__' + p.id).toLowerCase().trim();
+    (byNum[k] = byNum[k] || []).push(p);
+  });
+  dupConflicts = []; dupAlts = [];
+  Object.values(byNum).forEach(grp => {
+    if (grp.length < 2) return;
+    const byBrand = {};
+    grp.forEach(p => { const bk = (p.brand||'').toLowerCase().trim(); (byBrand[bk] = byBrand[bk]||[]).push(p); });
+    // Conflicts: same brand, multiple prices
+    Object.values(byBrand).forEach(bg => {
+      if (bg.length < 2) return;
+      if (new Set(bg.map(p => p.price)).size > 1) dupConflicts.push({number:bg[0].number, name:bg[0].name, brand:bg[0].brand, rows:bg});
+    });
+    // Alternatives: different brands
+    if (Object.keys(byBrand).length > 1) dupAlts.push({number:grp[0].number, name:grp[0].name, rows:grp});
+  });
+  return dupConflicts.length > 0 || dupAlts.length > 0;
+}
+
+function showDupModal() {
+  let html = '';
+  if (dupConflicts.length) {
+    html += `<div class="dup-sec"><div class="dup-sec-title dst-conflict">⚠ Price Conflicts — Same Brand, Different Prices (${dupConflicts.length})</div>`;
+    dupConflicts.forEach((g, gi) => {
+      const prices = g.rows.map(r => r.price).filter(Boolean).sort((a,b)=>a-b);
+      const mn = prices[0], mx = prices[prices.length-1];
+      html += `<div class="dup-group"><div class="dup-grp-hd"><span><span class="dg-name">${esc(g.name)}</span> <span class="dg-num">${esc(g.number)}</span></span><span class="dg-num" style="color:#888">${esc(g.brand)}</span></div><div class="dup-rows">`;
+      g.rows.forEach((row, ri) => {
+        const tag = row.price===mn?'<span class="tag-low">Lowest</span>':row.price===mx?'<span class="tag-high">Highest</span>':'';
+        html += `<label class="dup-row${ri===0?' sel':''}">
+          <input type="radio" name="conf-${gi}" value="${ri}" ${ri===0?'checked':''}>
+          <div class="dup-row-info">
+            <div class="dr-brand">${esc(row.brand||'—')} ${tag}</div>
+            <div class="dr-meta"><span>Stock: ${row.stock??'—'}</span><span>Condition: ${esc(row.condition||'—')}</span>${row.vehicle?`<span>${esc(row.vehicle)}</span>`:''}</div>
+          </div>
+          <div class="dr-price">${row.price?'KES '+row.price.toLocaleString():'—'}</div>
+        </label>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `</div>`;
+  }
+  if (dupAlts.length) {
+    html += `<div class="dup-sec"><div class="dup-sec-title dst-alt">ℹ Brand Alternatives — Auto-Grouped (${dupAlts.length})</div>
+      <p style="font-size:12px;color:#555;margin-bottom:10px;line-height:1.6">These share a part number but have different brands. They'll show as selectable brand pills on one card. No action needed.</p>`;
+    dupAlts.forEach(g => {
+      html += `<div class="dup-group"><div class="dup-grp-hd"><span><span class="dg-name">${esc(g.name)}</span> <span class="dg-num">${esc(g.number)}</span></span><span class="dg-badge">${g.rows.length} brands</span></div><div class="dup-rows">`;
+      g.rows.forEach(row => {
+        html += `<div class="dup-row keep">
+          <div class="dup-row-info">
+            <div class="dr-brand">${esc(row.brand||'Unknown')}</div>
+            <div class="dr-meta"><span>Condition: ${esc(row.condition||'—')}</span><span>Stock: ${row.stock??'—'}</span></div>
+          </div>
+          <div class="dr-price">${row.price?'KES '+row.price.toLocaleString():'—'}</div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `</div>`;
+  }
+  document.getElementById('dup-body').innerHTML = html;
+  const s = [];
+  if (dupConflicts.length) s.push(`${dupConflicts.length} price conflict${dupConflicts.length>1?'s':''} need your decision`);
+  if (dupAlts.length)      s.push(`${dupAlts.length} brand group${dupAlts.length>1?'s':''} will be auto-grouped`);
+  document.getElementById('dup-summary').textContent = s.join(' · ');
+  document.getElementById('dup-ft-info').innerHTML = `<strong>${pendingImport.length}</strong> total rows`;
+
+  // wire radio change for highlighting
+  document.querySelectorAll('input[name^="conf-"]').forEach(inp => {
+    inp.addEventListener('change', () => {
+      const name = inp.getAttribute('name');
+      document.querySelectorAll(`input[name="${name}"]`).forEach((r, i) => {
+        r.closest('.dup-row').classList.toggle('sel', r.checked);
+      });
+    });
+  });
+
+  document.getElementById('dup-backdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDupModal() {
+  document.getElementById('dup-backdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function applyDupResolution() {
+  let resolved = [...pendingImport];
+  dupConflicts.forEach((g, gi) => {
+    const sel = document.querySelector(`input[name="conf-${gi}"]:checked`);
+    const keepRow = g.rows[sel ? parseInt(sel.value) : 0];
+    const removeIds = g.rows.filter(r => r.id !== keepRow.id).map(r => r.id);
+    resolved = resolved.filter(p => !removeIds.includes(p.id));
+  });
+  closeDupModal();
+  finalizeImport(resolved);
+}
+
+function finalizeImport(data) {
+  storageSave(data);
+  ingest(data);
+  resetUpload();
+  toast(`Import complete! ${data.length} parts loaded into the catalogue.`, 'success', 4500);
+  showPage('catalogue');
+}
+
+/* ════════════════════════════════════════
+   DATA INGESTION & GROUPING
+════════════════════════════════════════ */
+function ingest(arr) {
+  FLAT = arr;
+  // Build categories & conditions from flat data
+  CATS = {'ALL': FLAT.length}; CONDS = {'ALL': FLAT.length};
+  FLAT.forEach(p => {
+    const cat  = p.category || 'General';
+    const cond = p.condition || 'New';
+    CATS[cat]   = (CATS[cat]  || 0) + 1;
+    CONDS[cond] = (CONDS[cond]|| 0) + 1;
+  });
+  // Group by part number for catalogue display
+  const byNum = {};
+  FLAT.forEach(p => {
+    const k = (p.number || p.id).toLowerCase().trim();
+    (byNum[k] = byNum[k] || []).push(p);
+  });
+  GROUPS = Object.values(byNum).map(grp => {
+    if (grp.length === 1) return {...grp[0], _variants: null, _sel: 0};
+    const sorted = [...grp].sort((a,b) => {
+      const ag = (a.brand||'').toLowerCase().includes('genuine') ? 0 : 1;
+      const bg2 = (b.brand||'').toLowerCase().includes('genuine') ? 0 : 1;
+      if (ag !== bg2) return ag - bg2;
+      return (a.price||0) - (b.price||0);
+    });
+    return {...sorted[0], _variants: sorted, _sel: 0};
+  });
+
+  document.getElementById('stat-count').textContent = FLAT.length + '+';
+  const abStat = document.getElementById('ab-stat-parts');
+  if (abStat) abStat.innerHTML = FLAT.length + '<sup>+</sup>';
+  buildSidebars();
+  buildHomeCats();
+  renderCatalogue();
+  updateInvBar();
+}
+
+/* ════════════════════════════════════════
+   CATALOGUE WIRING
+════════════════════════════════════════ */
+function wireCatalogue() {
+  document.getElementById('bc-home').addEventListener('click', () => showPage('home'));
+  document.getElementById('vt-grid').addEventListener('click', () => setView('grid'));
+  document.getElementById('vt-list').addEventListener('click', () => setView('list'));
+  document.getElementById('sort-sel').addEventListener('change', e => { sortMode = e.target.value; curPage = 1; renderCatalogue(); });
+  document.getElementById('cat-search').addEventListener('input', e => { fSearch = e.target.value.trim(); curPage = 1; renderCatalogue(); });
+  document.getElementById('price-slider').addEventListener('input', e => setPriceMax(parseInt(e.target.value), false));
+  document.getElementById('price-slider-mob').addEventListener('input', e => setPriceMax(parseInt(e.target.value), true));
+  document.getElementById('mob-filter-btn').addEventListener('click', openDrawer);
+  document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+  document.getElementById('drawer-overlay').addEventListener('click', closeDrawer);
+  document.getElementById('apply-filters-btn').addEventListener('click', closeDrawer);
+}
+
+function setView(m) {
+  viewMode = m;
+  document.getElementById('vt-grid').classList.toggle('active', m==='grid');
+  document.getElementById('vt-list').classList.toggle('active', m==='list');
+  renderCatalogue();
+}
+
+function setPriceMax(v, fromMobile) {
+  fPriceMax = v >= 50000 ? Infinity : v;
+  const lbl = v >= 50000 ? 'No limit' : `Up to KES ${v.toLocaleString()}`;
+  document.getElementById('price-lbl').textContent = lbl;
+  document.getElementById('price-lbl-mob').textContent = lbl;
+  if (fromMobile) document.getElementById('price-slider').value = v;
+  else            document.getElementById('price-slider-mob').value = v;
+  curPage = 1; renderCatalogue();
+}
+
+function openDrawer() {
+  document.getElementById('drawer-bg').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  document.getElementById('drawer-bg').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ════════════════════════════════════════
+   SIDEBAR BUILDER
+════════════════════════════════════════ */
+function buildSidebars() {
+  buildCatList('sb-cats',  false);
+  buildCatList('mob-cats', true);
+  buildCondList('sb-conds',  false);
+  buildCondList('mob-conds', true);
+}
+
+function buildCatList(containerId, isMob) {
+  const c = document.getElementById(containerId);
+  const cats = ['ALL', ...Object.keys(CATS).filter(k => k !== 'ALL')];
+  c.innerHTML = cats.map(cat => {
+    const label = cat === 'ALL' ? 'All Parts' : cat;
+    const count = CATS[cat] || FLAT.length;
+    const active = fCat === cat;
+    return `<div class="sb-item${active?' active':''}" data-cat="${escA(cat)}" data-mob="${isMob}">
+      ${catIcon(cat)} ${esc(label)}<span class="sb-badge">${count}</span>
+    </div>`;
+  }).join('');
+  c.querySelectorAll('.sb-item').forEach(el => {
+    el.addEventListener('click', () => {
+      fCat = el.dataset.cat; curPage = 1;
+      document.getElementById('cat-title').textContent = fCat === 'ALL' ? 'All Parts' : fCat;
+      buildSidebars(); renderCatalogue();
+    });
+  });
+}
+
+function buildCondList(containerId, isMob) {
+  const c = document.getElementById(containerId);
+  const pfx = isMob ? 'mob' : 'desk';
+  const conds = ['ALL', ...Object.keys(CONDS).filter(k => k !== 'ALL')];
+  c.innerHTML = conds.map(cond => {
+    const label = cond === 'ALL' ? 'All Conditions' : cond;
+    const count = CONDS[cond] || FLAT.length;
+    return `<div class="radio-row">
+      <input type="radio" name="cond-${pfx}" id="cond-${pfx}-${escA(cond)}" value="${escA(cond)}" ${fCond===cond?'checked':''}>
+      <label for="cond-${pfx}-${escA(cond)}">${esc(label)} <span style="color:#333">(${count})</span></label>
+    </div>`;
+  }).join('');
+  c.querySelectorAll('input[type=radio]').forEach(inp => {
+    inp.addEventListener('change', () => { if (inp.checked) { fCond = inp.value; curPage = 1; buildSidebars(); renderCatalogue(); } });
+  });
+}
+
+/* ════════════════════════════════════════
+   HOME CATEGORY TILES
+════════════════════════════════════════ */
+function buildHomeCats() {
+  const cats = Object.keys(CATS).filter(k => k !== 'ALL').slice(0, 8);
+  document.getElementById('home-cats').innerHTML = cats.map(cat =>
+    `<div class="cat-tile" data-cat="${escA(cat)}" tabindex="0" role="button" aria-label="Browse ${cat}">
+      <div class="ti">${catIcon(cat)}</div>
+      <div class="tn">${esc(cat)}</div>
+      <div class="tc">${CATS[cat]} part${CATS[cat]!==1?'s':''}</div>
+    </div>`
+  ).join('');
+  document.querySelectorAll('.cat-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      fCat = tile.dataset.cat;
+      document.getElementById('cat-title').textContent = fCat;
+      buildSidebars(); showPage('catalogue'); renderCatalogue();
+    });
+  });
+}
+
+function doHomeSearch() {
+  const val = document.getElementById('home-search').value.trim();
+  if (!val) return;
+  fSearch = val;
+  document.getElementById('cat-search').value = val;
+  showPage('catalogue'); renderCatalogue();
+}
+
+/* ════════════════════════════════════════
+   INVENTORY BAR
+════════════════════════════════════════ */
+function updateInvBar() {
+  const saved = storageGet();
+  const bar = document.getElementById('inv-bar');
+  const infoEl = document.getElementById('inv-bar-info-text');
+  const actsEl = document.getElementById('inv-bar-acts');
+
+  if (SHEET_URL) {
+    bar.style.display = 'flex';
+    bar.style.background = sheetSyncOK === false ? '#1a0f0a' : '#0a1a0d';
+    bar.style.borderColor = sheetSyncOK === false ? 'rgba(245,158,11,.18)' : 'rgba(34,197,94,.14)';
+    if (sheetSyncOK === false) {
+      infoEl.innerHTML = `⚠️ Could not load live data — showing fallback. <strong style="color:#f59e0b">${FLAT.length}</strong> parts shown.`;
+    } else {
+      infoEl.innerHTML = `📊 <strong>${FLAT.length}</strong> parts synced from Google Sheet`;
+    }
+    actsEl.innerHTML = `<button class="btn-sm blue" id="refresh-sheet-btn">↻ Refresh from Sheet</button>`;
+    document.getElementById('refresh-sheet-btn').addEventListener('click', () => fetchFromSheet(SHEET_URL, false));
+    return;
+  }
+
+  if (saved && saved.length) {
+    bar.style.display = 'flex';
+    bar.style.background = '#0a1a0d';
+    bar.style.borderColor = 'rgba(34,197,94,.14)';
+    infoEl.innerHTML = `📦 <strong>${FLAT.length}</strong> parts imported (saved locally)`;
+    actsEl.innerHTML = `
+      <button class="btn-sm blue" id="reimport-btn">＋ Import New CSV</button>
+      <button class="btn-sm red" id="clear-inv-btn">🗑 Clear Inventory</button>`;
+    document.getElementById('reimport-btn').addEventListener('click', () => showPage('upload'));
+    document.getElementById('clear-inv-btn').addEventListener('click', confirmClearInv);
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+function confirmClearInv() {
+  const tc = document.getElementById('toasts');
+  const el = document.createElement('div');
+  el.className = 'toast t-error';
+  el.innerHTML = `<span class="toast-msg">Clear all imported inventory and revert to sample data?</span>
+    <button class="btn-sm red" style="margin-left:8px;flex-shrink:0" id="confirm-clear-yes">Yes, clear</button>
+    <button class="toast-x" id="confirm-clear-no">×</button>`;
+  tc.appendChild(el);
+  el.querySelector('#confirm-clear-yes').addEventListener('click', () => { dismissToast(el); doClearInv(); });
+  el.querySelector('#confirm-clear-no').addEventListener('click',  () => dismissToast(el));
+  setTimeout(() => dismissToast(el), 6000);
+}
+
+function doClearInv() {
+  storageRemove(); ingest(mockData());
+  toast('Inventory cleared. Showing sample data.', 'info');
+}
+
+/* ════════════════════════════════════════
+   FILTER & RENDER
+════════════════════════════════════════ */
+function getFiltered() {
+  const s = fSearch.toLowerCase();
+  return GROUPS.filter(p => {
+    const variants = p._variants || [p];
+    if (fCat !== 'ALL' && p.category !== fCat) return false;
+    if (fCond !== 'ALL' && !variants.some(v => v.condition === fCond)) return false;
+    if (fPriceMax !== Infinity && !variants.some(v => !v.price || v.price <= fPriceMax)) return false;
+    if (s) return variants.some(v => ['name','number','vehicle','engine','brand','category'].some(k => (v[k]||'').toLowerCase().includes(s)));
+    return true;
+  }).sort((a, b) => {
+    if (sortMode === 'name')       return (a.name||'').localeCompare(b.name||'');
+    if (sortMode === 'price-asc')  return (a.price||0) - (b.price||0);
+    if (sortMode === 'price-desc') return (b.price||0) - (a.price||0);
+    return 0;
+  });
+}
+
+function renderCatalogue() {
+  const list  = getFiltered();
+  const total = list.length;
+  const totalSKUs = list.reduce((n,p) => n + (p._variants ? p._variants.length : 1), 0);
+  const skuNote = totalSKUs !== total ? ` (${totalSKUs} SKUs)` : '';
+  document.getElementById('cat-count').textContent = `${total} part${total!==1?'s':''}${skuNote} found`;
+
+  renderChips();
+  updateInvBar();
+
+  const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  if (curPage > pages) curPage = pages;
+  const items = list.slice((curPage-1)*PAGE_SIZE, curPage*PAGE_SIZE);
+
+  const pc = document.getElementById('parts-container');
+  if (!items.length) {
+    pc.innerHTML = `<div class="no-results"><div class="nri">🔍</div><h3>No parts found</h3><p>Try a different search term, or <a id="clear-filters-link">clear all filters</a>.</p></div>`;
+    document.getElementById('clear-filters-link')?.addEventListener('click', clearFilters);
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+  pc.innerHTML = viewMode === 'grid'
+    ? `<div class="parts-grid">${items.map(cardHTML).join('')}</div>`
+    : `<div class="parts-list">${items.map(rowHTML).join('')}</div>`;
+
+  // wire variant pills
+  pc.querySelectorAll('.alt-pill').forEach(btn => {
+    btn.addEventListener('click', () => switchVariant(btn.dataset.gid, parseInt(btn.dataset.vi)));
+  });
+
+  renderPagination(pages);
+}
+
+function condClass(c) {
+  const l = (c||'').toLowerCase();
+  if (l.includes('new'))   return 'cn';
+  if (l.includes('oem'))   return 'co';
+  if (l.includes('recon')) return 'cr';
+  if (l.includes('after')) return 'ca';
+  return 'cd';
+}
+function stockClass(p) { return !p.stock||p.stock<=0?'s-out':p.stock<=3?'s-low':'s-ok'; }
+function stockText(p)  { return !p.stock||p.stock<=0?'✕ Out of stock':p.stock<=3?`⚠ Only ${p.stock} left`:'✓ In stock'; }
+
+function cardHTML(p) {
+  const sel = p._variants ? p._variants[p._sel||0] : p;
+  const prStr = sel.price ? `KES ${sel.price.toLocaleString()}` : 'Contact for price';
+  const cond = sel.condition || 'New';
+  const vehicleLine = sel.vehicle ? `<div class="spec-l">🚗 ${esc(sel.vehicle)}</div>` : '';
+  const engineLine  = sel.engine  ? `<div class="spec-l">⚙️ Engine: <strong>${esc(sel.engine)}</strong></div>` : '';
+  let altPills = '';
+  if (p._variants && p._variants.length > 1) {
+    altPills = `<div class="alt-section">
+      <div class="alt-label">Available brands</div>
+      <div class="alt-pills">${p._variants.map((v,vi) =>
+        `<button class="alt-pill${vi===(p._sel||0)?' on':''}" data-gid="${escA(p.id)}" data-vi="${vi}">${esc(v.brand||'—')}</button>`
+      ).join('')}</div></div>`;
+  }
+  return `<div class="part-card" id="card-${escA(p.id)}">
+    <div class="card-top">${catIcon(p.category)}<span class="cond-pill ${condClass(cond)}">${esc(cond)}</span></div>
+    <div class="card-body">
+      <div class="card-sku">SKU: <span>${esc(p.number||'N/A')}</span></div>
+      <div class="card-name">${sel.brand?`<span class="card-brand-span" id="cbrand-${escA(p.id)}">${esc(sel.brand.toUpperCase())}</span>`:''}${esc(p.name)}</div>
+      ${vehicleLine||engineLine?`<div class="card-specs">${vehicleLine}${engineLine}</div>`:''}
+      ${altPills}
+      <div class="card-price" id="cprice-${escA(p.id)}">${prStr}</div>
+      <div class="card-stock ${stockClass(sel)}" id="cstock-${escA(p.id)}">${stockText(sel)}</div>
+      <div class="card-acts">
+        <button class="btn-quote" data-id="${escA(sel.id)}">Get Quote</button>
+        <button class="btn-wa-sm" data-name="${escA(p.name)}" data-num="${escA(p.number||'')}" data-veh="${escA(sel.vehicle||'')}" title="Enquire on WhatsApp" aria-label="Enquire">${WASVG}</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function rowHTML(p) {
+  const sel = p._variants ? p._variants[p._sel||0] : p;
+  const prStr = sel.price ? `KES ${sel.price.toLocaleString()}` : '—';
+  return `<div class="part-row">
+    <div class="row-icon">${catIcon(p.category)}</div>
+    <div>
+      <div class="row-name">${esc(p.name)}</div>
+      <div class="row-sku">${esc(p.number||'N/A')}</div>
+      <div class="row-meta">
+        ${sel.brand    ?`<span>Brand: <strong>${esc(sel.brand)}</strong></span>`:''}
+        ${p.category   ?`<span>${esc(p.category)}</span>`:''}
+        ${sel.condition?`<span style="color:var(--gold)">${esc(sel.condition)}</span>`:''}
+        ${sel.vehicle  ?`<span>${esc(sel.vehicle)}</span>`:''}
+      </div>
+    </div>
+    <div>
+      <div class="row-price">${prStr}</div>
+      <div class="row-stk ${stockClass(sel)}">${stockText(sel)}</div>
+    </div>
+    <div class="row-acts">
+      <button class="btn-q-row" data-id="${escA(sel.id)}">Quote</button>
+      <button class="btn-wa-row" data-name="${escA(p.name)}" data-num="${escA(p.number||'')}" data-veh="${escA(sel.vehicle||'')}" aria-label="WhatsApp">${WASVG}</button>
+    </div>
+  </div>`;
+}
+
+// Event delegation for quote + WA buttons
+document.getElementById('parts-container').addEventListener('click', e => {
+  const qBtn = e.target.closest('[data-id]');
+  if (qBtn) { openModal(qBtn.dataset.id); return; }
+  const wBtn = e.target.closest('[data-name]');
+  if (wBtn) { directWA(wBtn.dataset.name, wBtn.dataset.num, wBtn.dataset.veh); }
+});
+
+function switchVariant(gid, vi) {
+  const grp = GROUPS.find(p => p.id === gid);
+  if (!grp || !grp._variants) return;
+  grp._sel = vi;
+  const v = grp._variants[vi];
+  const card = document.getElementById('card-' + gid);
+  if (!card) return;
+  card.querySelectorAll('.alt-pill').forEach((pill, i) => pill.classList.toggle('on', i===vi));
+  const bEl = document.getElementById('cbrand-' + gid);
+  if (bEl) bEl.textContent = (v.brand||'').toUpperCase();
+  const condEl = card.querySelector('.cond-pill');
+  if (condEl) { condEl.textContent = v.condition||'New'; condEl.className = `cond-pill ${condClass(v.condition||'New')}`; }
+  const prEl = document.getElementById('cprice-' + gid);
+  if (prEl) prEl.textContent = v.price ? `KES ${v.price.toLocaleString()}` : 'Contact for price';
+  const stEl = document.getElementById('cstock-' + gid);
+  if (stEl) { stEl.className = `card-stock ${stockClass(v)}`; stEl.textContent = stockText(v); }
+  const qBtn = card.querySelector('.btn-quote');
+  if (qBtn) qBtn.dataset.id = v.id;
+  const wBtn = card.querySelector('.btn-wa-sm');
+  if (wBtn) { wBtn.dataset.name = grp.name; wBtn.dataset.num = grp.number||''; wBtn.dataset.veh = v.vehicle||''; }
+}
+
+function renderPagination(tot) {
+  const el = document.getElementById('pagination');
+  if (tot <= 1) { el.innerHTML = ''; return; }
+  let h = `<button class="pg" ${curPage===1?'disabled':''} data-pg="${curPage-1}" aria-label="Previous">‹</button>`;
+  for (let i = 1; i <= tot; i++) {
+    if (i===1||i===tot||(i>=curPage-2&&i<=curPage+2)) {
+      h += `<button class="pg${i===curPage?' on':''}" data-pg="${i}" aria-label="Page ${i}"${i===curPage?' aria-current="page"':''}>${i}</button>`;
+    } else if (i===curPage-3||i===curPage+3) {
+      h += `<span class="pg-dots">…</span>`;
+    }
+  }
+  h += `<button class="pg" ${curPage===tot?'disabled':''} data-pg="${curPage+1}" aria-label="Next">›</button>`;
+  el.innerHTML = h;
+}
+document.getElementById('pagination').addEventListener('click', e => {
+  const btn = e.target.closest('[data-pg]');
+  if (btn && !btn.disabled) { curPage = parseInt(btn.dataset.pg); renderCatalogue(); window.scrollTo(0,64); }
+});
+
+/* ════════════════════════════════════════
+   FILTER CHIPS
+════════════════════════════════════════ */
+function renderChips() {
+  const chips = [];
+  if (fCat !== 'ALL')       chips.push({label: fCat, key: 'cat'});
+  if (fCond !== 'ALL')      chips.push({label: fCond, key: 'cond'});
+  if (fPriceMax !== Infinity) chips.push({label: `Under KES ${fPriceMax.toLocaleString()}`, key: 'price'});
+  if (fSearch)              chips.push({label: `"${fSearch}"`, key: 'search'});
+  const bar = document.getElementById('filter-chips');
+  if (!chips.length) { bar.innerHTML = ''; return; }
+  bar.innerHTML = chips.map(c =>
+    `<span class="chip">${esc(c.label)} <button data-key="${c.key}" aria-label="Remove filter">×</button></span>`
+  ).join('') + (chips.length>1 ? `<span class="chip-clear" id="clear-all-chips">Clear all</span>` : '');
+  bar.querySelectorAll('.chip button').forEach(btn => btn.addEventListener('click', () => removeFilter(btn.dataset.key)));
+  document.getElementById('clear-all-chips')?.addEventListener('click', clearFilters);
+}
+
+function removeFilter(key) {
+  if (key==='cat')    { fCat='ALL'; document.getElementById('cat-title').textContent='All Parts'; buildSidebars(); }
+  if (key==='cond')   { fCond='ALL'; buildSidebars(); }
+  if (key==='price')  { fPriceMax=Infinity; document.getElementById('price-slider').value=50000; document.getElementById('price-slider-mob').value=50000; document.getElementById('price-lbl').textContent='No limit'; document.getElementById('price-lbl-mob').textContent='No limit'; }
+  if (key==='search') { fSearch=''; document.getElementById('cat-search').value=''; }
+  curPage=1; renderCatalogue();
+}
+
+function clearFilters() {
+  fCat='ALL'; fCond='ALL'; fPriceMax=Infinity; fSearch='';
+  document.getElementById('cat-title').textContent='All Parts';
+  document.getElementById('cat-search').value='';
+  document.getElementById('price-slider').value=50000;
+  document.getElementById('price-slider-mob').value=50000;
+  document.getElementById('price-lbl').textContent='No limit';
+  document.getElementById('price-lbl-mob').textContent='No limit';
+  buildSidebars(); curPage=1; renderCatalogue();
+}
+
+/* ════════════════════════════════════════
+   QUOTE MODAL
+════════════════════════════════════════ */
+function wireModals() {
+  document.getElementById('modal-close').addEventListener('click',  closeModal);
+  document.getElementById('modal-cancel').addEventListener('click', closeModal);
+  document.getElementById('modal-send').addEventListener('click',   submitWA);
+  document.getElementById('modal-wa').addEventListener('click',     submitWA);
+  document.getElementById('modal-done').addEventListener('click',   closeModal);
+  document.getElementById('backdrop').addEventListener('click', e => { if (e.target.id==='backdrop') closeModal(); });
+
+  document.getElementById('dup-skip').addEventListener('click',          () => { closeDupModal(); finalizeImport(pendingImport); });
+  document.getElementById('dup-import-as-is').addEventListener('click',  () => { closeDupModal(); finalizeImport(pendingImport); });
+  document.getElementById('dup-apply').addEventListener('click',         applyDupResolution);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeModal(); closeDrawer(); closeDupModal(); }
+  });
+}
+
+function openModal(partId) {
+  activeModal = FLAT.find(p => p.id === partId);
+  if (!activeModal) return;
+  document.getElementById('modal-part-lbl').innerHTML = `<strong>${esc(activeModal.name)}</strong>${activeModal.number ? ` — ${esc(activeModal.number)}` : ''}`;
+  document.getElementById('modal-main').style.display = 'block';
+  document.getElementById('modal-success').style.display = 'none';
+  document.getElementById('backdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('q-name').focus(), 80);
+}
+
+function closeModal() {
+  document.getElementById('backdrop').classList.remove('open');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function submitWA() {
+  const name  = document.getElementById('q-name').value.trim();
+  const phone = document.getElementById('q-phone').value.trim();
+  if (!name || !phone) { toast('Please enter your name and phone number before sending.', 'error'); return; }
+  const qty   = document.getElementById('q-qty').value  || 1;
+  const brand = document.getElementById('q-brand').value.trim() || 'Any';
+  const notes = document.getElementById('q-msg').value.trim();
+  const part  = activeModal ? `${activeModal.name}${activeModal.number?` [${activeModal.number}]`:''}` : 'General enquiry';
+  const msg = `Hello Autoserve & Hardware Supplies,\n\nI'd like a quote for:\n🔩 *Part:* ${part}\n🔢 *Qty:* ${qty}\n🏷️ *Brand:* ${brand}\n\n*My details:*\n👤 ${name}\n📞 ${phone}${notes?`\n💬 ${notes}`:''}`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+  document.getElementById('modal-main').style.display = 'none';
+  document.getElementById('modal-success').style.display = 'block';
+}
+
+function directWA(name, num, vehicle) {
+  let msg = `Hello Autoserve,\n\nPlease check availability for:\n📦 *${name}*`;
+  if (num)     msg += `\n🏷️ Part No: *${num}*`;
+  if (vehicle) msg += `\n🚗 Vehicle: ${vehicle}`;
+  msg += `\n\nPlease send price and stock status. Thank you!`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+}
+
+/* ════════════════════════════════════════
+   TOAST
+════════════════════════════════════════ */
+function toast(msg, type='info', duration=3500) {
+  const icons = {success:'✅', error:'❌', info:'🔔'};
+  const el = document.createElement('div');
+  el.className = `toast t-${type}`;
+  el.innerHTML = `<span class="toast-msg">${icons[type]||'🔔'} ${esc(msg)}</span><button class="toast-x" aria-label="Dismiss">×</button>`;
+  el.querySelector('.toast-x').addEventListener('click', () => dismissToast(el));
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(() => dismissToast(el), duration);
+}
+function dismissToast(el) {
+  if (!el.parentNode) return;
+  el.classList.add('leaving');
+  setTimeout(() => el.parentNode && el.parentNode.removeChild(el), 240);
+}
+
+/* ════════════════════════════════════════
+   STORAGE
+════════════════════════════════════════ */
+function storageSave(data) { try { localStorage.setItem(STORE_KEY, JSON.stringify(data)); } catch(e){} }
+function storageGet()      { try { const d=localStorage.getItem(STORE_KEY); return d?JSON.parse(d):null; } catch(e){ return null; } }
+function storageRemove()   { try { localStorage.removeItem(STORE_KEY); } catch(e){} }
+
+/* ════════════════════════════════════════
+   UTILS
+════════════════════════════════════════ */
+/* ════════════════════════════════════════
+   KNOW MY CAR — DIAGRAM DATA & ENGINE
+════════════════════════════════════════ */
+
+/* Vehicle model/year data */
+const KMC_MODELS = {
+  toyota:    [{v:'hilux',l:'Hilux'},{v:'corolla',l:'Corolla'},{v:'vitz',l:'Vitz / Yaris'},{v:'harrier',l:'Harrier'},{v:'prado',l:'Land Cruiser Prado'}],
+  nissan:    [{v:'xtrail',l:'X-Trail'},{v:'navara',l:'Navara'},{v:'tiida',l:'Tiida'},{v:'patrol',l:'Patrol'}],
+  isuzu:     [{v:'dmax',l:'D-Max'},{v:'tfr',l:'TFR Pickup'},{v:'npr',l:'NPR Truck'}],
+  subaru:    [{v:'forester',l:'Forester'},{v:'outback',l:'Outback'},{v:'impreza',l:'Impreza'}],
+  mitsubishi:[{v:'pajero',l:'Pajero'},{v:'l200',l:'L200 / Triton'},{v:'outlander',l:'Outlander'}],
+};
+const KMC_YEARS = ['2024','2023','2022','2021','2020','2019','2018','2017','2016','2015','2014','2013','2012','2010','2008','2006','2004'];
+
+/* ── DIAGRAM DEFINITIONS ──
+   Each system has: title, sub, parts[]
+   Each part: id, num, name, desc, x%, y% (hotspot position), cat, fits, cond, price
+*/
+const KMC_SYSTEMS = {
+  engine: {
+    title: 'Engine Block & Oil Pan',
+    sub:   'Toyota 1NZ-FE / 2NZ-FE · NCP Series',
+    parts: [
+      {id:'e1',  num:'11401',      name:'Cylinder Block Assembly',       x:47, y:24, desc:'Main engine block casting. Houses cylinders, crankshaft journals and water jackets.',       cat:'Engine',    fits:'Toyota Corolla / Vitz 1NZ-FE', cond:'New',         price:'KES 45,000–80,000'},
+      {id:'e2',  num:'12101',      name:'Oil Pan Sub-Assembly',          x:40, y:58, desc:'Lower sump that collects and holds engine oil. Includes drain plug boss.',                  cat:'Engine',    fits:'Toyota Corolla / Vitz 1NZ-FE', cond:'New/Recon',   price:'KES 3,500–7,000'},
+      {id:'e3',  num:'12102A',     name:'Oil Pan Gasket',                x:28, y:76, desc:'Sealing gasket between oil pan and cylinder block. Prevents oil leaks.',                   cat:'Gaskets',   fits:'Toyota 1NZ / 2NZ-FE',          cond:'New',         price:'KES 800–1,500'},
+      {id:'e4',  num:'11401L',     name:'Rear Crankshaft Oil Seal',      x:87, y:46, desc:'Lip-type oil seal preventing crankshaft rear leakage into bell housing.',                  cat:'Oil Seals', fits:'Toyota 1NZ / 2NZ-FE',          cond:'New',         price:'KES 600–1,200'},
+      {id:'e5',  num:'15301',      name:'Oil Level Dipstick',            x:65, y:70, desc:'Engine oil level measurement rod with MIN/MAX markings.',                                  cat:'Engine',    fits:'Toyota Corolla / Vitz',          cond:'New',         price:'KES 400–900'},
+      {id:'e6',  num:'11452',      name:'Oil Filler Tube',               x:82, y:80, desc:'Tube guide for oil dipstick. Clips to engine block.',                                      cat:'Engine',    fits:'Toyota 1NZ-FE',                 cond:'New',         price:'KES 500–1,000'},
+      {id:'e7',  num:'11434C',     name:'Cylinder Block Plug (Front)',   x:12, y:18, desc:'Expansion frost plug sealing coolant passage in front of block.',                          cat:'Engine',    fits:'Toyota 1NZ-FE',                 cond:'New',         price:'KES 200–500'},
+      {id:'e8',  num:'11434G',     name:'Cylinder Block Plug (Side)',    x:74, y:18, desc:'Expansion frost plug sealing coolant passage on side of block.',                           cat:'Engine',    fits:'Toyota 1NZ-FE',                 cond:'New',         price:'KES 200–500'},
+      {id:'e9',  num:'11416',      name:'Engine Block Stiffener',        x:35, y:42, desc:'Lower reinforcement brace bolted to bottom of cylinder block for rigidity.',               cat:'Engine',    fits:'Toyota 1NZ-FE NCP20',           cond:'New/Recon',   price:'KES 2,500–5,000'},
+      {id:'e10', num:'11363A',     name:'Engine Rear Plate',             x:90, y:30, desc:'Thin plate between engine block and transmission bell housing.',                           cat:'Engine',    fits:'Toyota Corolla 1NZ',             cond:'New',         price:'KES 800–1,500'},
+      {id:'e11', num:'11361J',     name:'Side Cover Plate',              x:88, y:60, desc:'Cover plate sealing side aperture on engine block.',                                       cat:'Engine',    fits:'Toyota 1NZ-FE',                 cond:'New',         price:'KES 600–1,200'},
+      {id:'e12', num:'90119-08B49', name:'Cylinder Block Bolt',         x:55, y:52, desc:'Hex head bolt securing oil pan stiffener to block. M8×1.25.',                             cat:'Engine',    fits:'Toyota 1NZ / 2NZ-FE',          cond:'New',         price:'KES 80–200 each'},
+      {id:'e13', num:'11415',      name:'Engine Oil Pressure Switch',    x:6,  y:10, desc:'Sends oil pressure signal to dashboard warning light. Replace if light stays on.',         cat:'Electrical',fits:'Toyota Corolla / Vitz',          cond:'New',         price:'KES 1,200–2,500'},
+      {id:'e14', num:'13516B',     name:'Timing Chain Cover Bolt',       x:7,  y:47, desc:'Bolt securing timing chain front cover to cylinder block.',                               cat:'Engine',    fits:'Toyota 1NZ-FE',                 cond:'New',         price:'KES 150–300 each'},
+      {id:'e15', num:'96741-19005', name:'Oil Drain Plug',               x:60, y:82, desc:'Magnetic drain plug with crush washer. Replace washer at every oil change.',               cat:'Engine',    fits:'Universal Toyota / Isuzu',       cond:'New',         price:'KES 300–600'},
+    ]
+  },
+  brakes: {
+    title: 'Brake System — Front & Rear',
+    sub:   'Toyota Hilux / Vigo GGN15 · 4WD',
+    parts: [
+      {id:'b1', num:'47730-0K010', name:'Brake Caliper Assembly — Front LH', x:18, y:30, desc:'Front left hydraulic caliper. Houses pistons that clamp pads onto disc.',               cat:'Brakes', fits:'Toyota Hilux Vigo 4WD 2005–2015', cond:'New/Recon', price:'KES 8,000–15,000'},
+      {id:'b2', num:'47750-0K010', name:'Brake Caliper Assembly — Front RH', x:72, y:30, desc:'Front right hydraulic caliper. Mirror of LH unit.',                                    cat:'Brakes', fits:'Toyota Hilux Vigo 4WD 2005–2015', cond:'New/Recon', price:'KES 8,000–15,000'},
+      {id:'b3', num:'04465-0K240', name:'Front Brake Pad Set',               x:45, y:22, desc:'OEM-spec ceramic front brake pads. Set of 4. Replace as axle pairs.',                   cat:'Brakes', fits:'Toyota Hilux Vigo 2KD / 1KD',    cond:'New',       price:'KES 5,500–10,000'},
+      {id:'b4', num:'43512-0K030', name:'Front Brake Disc Rotor',            x:24, y:50, desc:'Vented front disc rotor. Minimum thickness 26mm. Replace in pairs.',                    cat:'Brakes', fits:'Toyota Hilux Vigo 4WD',           cond:'New',       price:'KES 4,500–8,000'},
+      {id:'b5', num:'47201-0K010', name:'Brake Master Cylinder',             x:50, y:45, desc:'Converts brake pedal force to hydraulic pressure. Replace if spongy pedal.',            cat:'Brakes', fits:'Toyota Hilux Vigo',               cond:'New/Recon', price:'KES 6,000–12,000'},
+      {id:'b6', num:'90947-02083', name:'Brake Hose — Front',                x:30, y:62, desc:'Flexible rubber hose connecting hard line to caliper. Replace if cracked.',             cat:'Brakes', fits:'Toyota Hilux Vigo',               cond:'New',       price:'KES 800–1,800'},
+      {id:'b7', num:'04479-35120', name:'Rear Brake Pad Set',                x:45, y:72, desc:'Rear brake pads for disc-braked Hilux variants.',                                       cat:'Brakes', fits:'Toyota Hilux Vigo 4WD',           cond:'New',       price:'KES 4,000–7,500'},
+      {id:'b8', num:'46410-0K030', name:'Rear Brake Drum',                   x:72, y:68, desc:'Cast iron rear brake drum. Replace if scored beyond 231.6mm diameter.',                 cat:'Brakes', fits:'Toyota Hilux 2WD',                cond:'New',       price:'KES 3,000–5,500'},
+      {id:'b9', num:'47560-0K010', name:'Rear Wheel Cylinder',               x:60, y:75, desc:'Hydraulic cylinder expanding rear brake shoes against drum.',                           cat:'Brakes', fits:'Toyota Hilux 2WD',                cond:'New',       price:'KES 1,200–2,500'},
+      {id:'b10',num:'47910-0K010', name:'ABS Speed Sensor — Front',          x:20, y:72, desc:'Magnetic wheel speed sensor feeding ABS ECU. Replace if ABS light on.',                cat:'Electrical', fits:'Toyota Hilux Vigo ABS',        cond:'New',       price:'KES 2,500–5,000'},
+    ]
+  },
+  suspension: {
+    title: 'Front Suspension & Steering Knuckle',
+    sub:   'Toyota Hilux Vigo / Land Cruiser Prado',
+    parts: [
+      {id:'s1', num:'48068-0K010', name:'Front Upper Control Arm',          x:28, y:18, desc:'Upper A-arm locating steering knuckle. Replace if bushes worn or bent.',                cat:'Suspension', fits:'Toyota Hilux Vigo 4WD',   cond:'New/Recon', price:'KES 6,000–12,000'},
+      {id:'s2', num:'48069-0K010', name:'Front Lower Control Arm',          x:28, y:55, desc:'Lower A-arm — primary suspension link. Includes ball joint seat.',                       cat:'Suspension', fits:'Toyota Hilux Vigo 4WD',   cond:'New/Recon', price:'KES 7,000–14,000'},
+      {id:'s3', num:'90389-14011', name:'Upper Ball Joint',                  x:42, y:26, desc:'Articulating joint between upper arm and steering knuckle. Replace if loose.',          cat:'Suspension', fits:'Toyota Hilux / Prado',     cond:'New',       price:'KES 1,500–3,500'},
+      {id:'s4', num:'43330-39495', name:'Lower Ball Joint',                  x:42, y:48, desc:'Critical lower joint. Failed lower ball joints can cause wheel separation.',            cat:'Suspension', fits:'Toyota Hilux / Prado',     cond:'New',       price:'KES 2,000–4,500'},
+      {id:'s5', num:'48510-80042', name:'Front Shock Absorber',              x:62, y:30, desc:'KYB / Genuine gas-filled shock absorber. Replace in pairs.',                            cat:'Suspension', fits:'Toyota Hilux Vigo',        cond:'New',       price:'KES 5,000–10,000'},
+      {id:'s6', num:'48158-35080', name:'Coil Spring — Front',               x:62, y:18, desc:'Front suspension spring. Replace if sagging below ride height spec.',                  cat:'Suspension', fits:'Toyota Hilux Vigo',        cond:'New',       price:'KES 3,500–7,000'},
+      {id:'s7', num:'48815-60080', name:'Stabilizer Bar Link',               x:80, y:52, desc:'End link connecting anti-roll bar to lower arm. Common wear item.',                    cat:'Suspension', fits:'Toyota Hilux / Prado',     cond:'New',       price:'KES 800–2,000'},
+      {id:'s8', num:'48654-60010', name:'Stabilizer Bar Bush',               x:20, y:68, desc:'Rubber bush mounting anti-roll bar to chassis. Replace if cracked.',                   cat:'Suspension', fits:'Toyota Hilux / Prado',     cond:'New',       price:'KES 300–700'},
+      {id:'s9', num:'43210-0K010', name:'Front Hub & Bearing Assembly',      x:48, y:65, desc:'Pre-packed sealed hub bearing. Replace if grinding or play detected.',                 cat:'Suspension', fits:'Toyota Hilux Vigo 4WD',   cond:'New',       price:'KES 4,500–9,000'},
+      {id:'s10',num:'45503-39175', name:'Tie Rod End — Outer',               x:72, y:72, desc:'Connects steering rack to steering knuckle. Replace if excessive play.',               cat:'Steering',   fits:'Toyota Hilux / Prado',     cond:'New',       price:'KES 1,200–2,800'},
+    ]
+  },
+  filters: {
+    title: 'Filters & Service Parts',
+    sub:   'Multi-vehicle · Toyota / Nissan / Isuzu',
+    parts: [
+      {id:'f1', num:'90915-YZZD2', name:'Engine Oil Filter',             x:20, y:22, desc:'Spin-on oil filter. Change at every oil service (every 5,000km).',                        cat:'Filters', fits:'Toyota 1NZ / 2AZ / 1GR',    cond:'New', price:'KES 350–800'},
+      {id:'f2', num:'17801-30060', name:'Engine Air Filter Element',     x:55, y:18, desc:'Flat panel air filter. Replace every 20,000km or when dirty.',                           cat:'Filters', fits:'Isuzu TFR / 4HG1',            cond:'New', price:'KES 700–1,500'},
+      {id:'f3', num:'23390-0L010', name:'Fuel Filter — Diesel',         x:78, y:28, desc:'Inline diesel fuel filter with water separator. Drain water weekly.',                    cat:'Filters', fits:'Toyota Hilux 2KD / 1KD',      cond:'New', price:'KES 1,500–3,500'},
+      {id:'f4', num:'87139-50010', name:'Cabin Air Filter',              x:35, y:42, desc:'Pollen / dust cabin air filter behind glove box. Replace annually.',                     cat:'Filters', fits:'Toyota Corolla / Vitz 2003+', cond:'New', price:'KES 600–1,200'},
+      {id:'f5', num:'15601-87703', name:'Transmission Oil Filter',       x:62, y:48, desc:'ATF filter inside automatic gearbox pan. Replace at every ATF service.',                 cat:'Filters', fits:'Toyota A245E Auto Trans',      cond:'New', price:'KES 800–1,800'},
+      {id:'f6', num:'04152-YZZA6', name:'Oil Filter — Isuzu',           x:20, y:62, desc:'Cartridge oil filter for Isuzu 4HG1 / 4JB1 engines.',                                    cat:'Filters', fits:'Isuzu TFR / NPR 4HG1',        cond:'New', price:'KES 400–900'},
+      {id:'f7', num:'16400-0L010', name:'Radiator Cap',                  x:48, y:65, desc:'Pressure cap maintaining 0.9 bar in cooling system. Replace every 3 years.',            cat:'Cooling', fits:'Universal Toyota / Nissan',    cond:'New', price:'KES 350–700'},
+      {id:'f8', num:'90916-03096', name:'Timing Belt',                   x:78, y:62, desc:'Toothed rubber belt driving camshaft. Replace every 100,000km — do not delay.',          cat:'Engine',  fits:'Toyota Corolla 2ZZ / Nissan',  cond:'New', price:'KES 2,500–6,000'},
+      {id:'f9', num:'90916-02588', name:'Alternator Belt (V-Belt)',      x:35, y:78, desc:'Drives alternator and power steering pump. Replace if cracked or glazed.',               cat:'Engine',  fits:'Toyota 1NZ / 2NZ-FE',          cond:'New', price:'KES 500–1,200'},
+      {id:'f10',num:'19300-21010', name:'Thermostat Assembly',           x:65, y:78, desc:'Wax-element thermostat opening at 82°C. Replace if overheating or cold running.',        cat:'Cooling', fits:'Toyota 1NZ / 2NZ-FE',          cond:'New', price:'KES 800–2,000'},
+    ]
+  },
+  steering: {
+    title: 'Steering System',
+    sub:   'Toyota Hilux Vigo / Land Cruiser · Power Steering',
+    parts: [
+      {id:'st1', num:'45510-0K050', name:'Steering Rack & Pinion',            x:45, y:45, desc:'Complete rack assembly including tie rods. Replace if leaking or loose.',              cat:'Steering', fits:'Toyota Hilux Vigo 2WD/4WD',  cond:'New/Recon', price:'KES 18,000–35,000'},
+      {id:'st2', num:'44310-60440', name:'Power Steering Pump',               x:22, y:28, desc:'Vane-type hydraulic pump driven by engine belt. Replace if noisy or slow steering.',  cat:'Steering', fits:'Toyota Hilux / Prado 1KD',   cond:'New/Recon', price:'KES 15,000–28,000'},
+      {id:'st3', num:'44306-60030', name:'Power Steering Hose — High Pressure',x:35, y:55, desc:'High-pressure hose from pump to rack. Replace if weeping at crimps.',                cat:'Steering', fits:'Toyota Hilux / Prado',       cond:'New',       price:'KES 2,000–4,500'},
+      {id:'st4', num:'45503-39175', name:'Tie Rod End — Outer',               x:72, y:55, desc:'Ball joint connecting rack to steering knuckle. Replace if play exceeds 2mm.',        cat:'Steering', fits:'Toyota Hilux / Prado',       cond:'New',       price:'KES 1,200–2,800'},
+      {id:'st5', num:'45462-39065', name:'Tie Rod End — Inner',               x:58, y:42, desc:'Inner tie rod / rack end threaded into steering rack.',                               cat:'Steering', fits:'Toyota Hilux Vigo',           cond:'New',       price:'KES 1,500–3,200'},
+      {id:'st6', num:'45820-0K020', name:'Steering Column Assembly',          x:50, y:18, desc:'Collapsible column with universal joints connecting wheel to rack.',                   cat:'Steering', fits:'Toyota Hilux Vigo',           cond:'New/Recon', price:'KES 8,000–16,000'},
+      {id:'st7', num:'04445-0K010', name:'Steering Rack Boot / Gaiter',       x:28, y:65, desc:'Rubber gaiter protecting inner rack from dirt. Replace if split.',                    cat:'Steering', fits:'Toyota Hilux Vigo',           cond:'New',       price:'KES 400–900'},
+      {id:'st8', num:'44312-06070', name:'Power Steering Fluid Reservoir',    x:18, y:50, desc:'Hydraulic fluid tank with filter screen. Replace if cracked.',                        cat:'Steering', fits:'Toyota Hilux / Prado',       cond:'New',       price:'KES 1,500–3,000'},
+      {id:'st9', num:'45535-35100', name:'Steering Idler Arm',                x:72, y:38, desc:'Supports relay rod on right side. Replace if worn — causes wandering.',               cat:'Steering', fits:'Toyota Hilux 2WD',           cond:'New',       price:'KES 2,000–4,000'},
+      {id:'st10',num:'45470-39295', name:'Pitman Arm',                        x:58, y:28, desc:'Converts steering box rotation to lateral movement of relay rod.',                    cat:'Steering', fits:'Toyota Hilux 2WD/4WD',       cond:'New',       price:'KES 2,500–5,000'},
+    ]
+  }
+};
+
+/* ── SVG DIAGRAM GENERATOR ──
+   Draws an exploded technical diagram in the style of the uploaded OEM diagram.
+   Each system has a unique SVG illustration of the assembly.
+*/
+function buildDiagramSVG(sysKey) {
+  const svgMap = {
+    engine:     engineSVG(),
+    brakes:     brakesSVG(),
+    suspension: suspensionSVG(),
+    filters:    filtersSVG(),
+    steering:   steeringSVG(),
+  };
+  return svgMap[sysKey] || engineSVG();
+}
+
+function engineSVG() {
+  return `<svg viewBox="0 0 580 520" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d0d">
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- grid -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20,0 L0,0 0,20" fill="none" stroke="#141414" stroke-width="1"/>
+  </pattern>
+  <rect width="580" height="520" fill="url(#grid)"/>
+
+  <!-- Cylinder block outline -->
+  <rect x="110" y="40" width="280" height="200" rx="6" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="118" y="55" font-size="9" fill="#333" font-family="monospace">CYLINDER BLOCK ASSEMBLY</text>
+
+  <!-- Block body -->
+  <rect x="130" y="65" width="240" height="155" rx="4" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <!-- cylinder bores -->
+  <ellipse cx="175" cy="98"  rx="22" ry="12" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+  <ellipse cx="225" cy="98"  rx="22" ry="12" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+  <ellipse cx="275" cy="98"  rx="22" ry="12" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+  <ellipse cx="325" cy="98"  rx="22" ry="12" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+  <!-- block details -->
+  <line x1="130" y1="135" x2="370" y2="135" stroke="#1e1e1e" stroke-width="1"/>
+  <line x1="130" y1="160" x2="370" y2="160" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="148" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <rect x="180" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <rect x="212" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <rect x="244" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <rect x="276" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <rect x="308" y="140" width="18" height="16" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <!-- mounting bolt holes -->
+  <circle cx="138" cy="72"  r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="362" cy="72"  r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="138" cy="212" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="362" cy="212" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Oil pan -->
+  <path d="M125,270 L375,270 L365,360 L135,360 Z" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <path d="M125,270 L375,270 L370,290 L130,290 Z" fill="#151515" stroke="#252525" stroke-width="1"/>
+  <!-- drain plug boss -->
+  <ellipse cx="250" cy="358" rx="10" ry="5" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+  <!-- oil pan gasket -->
+  <rect x="118" y="263" width="264" height="10" rx="2" fill="none" stroke="#1e6b3a" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Sub pan / lower block -->
+  <rect x="100" y="240" width="280" height="32" rx="3" fill="#0f0f0f" stroke="#252525" stroke-width="1.5"/>
+
+  <!-- Bolts along sump rail -->
+  <circle cx="138" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="178" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="218" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="258" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="298" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="338" cy="256" r="4" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Rear oil seal -->
+  <ellipse cx="500" cy="200" rx="26" ry="30" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="500" cy="200" rx="18" ry="22" fill="#0a0a0a" stroke="#1e1e1e" stroke-width="1"/>
+  <line x1="370" y1="190" x2="474" y2="195" stroke="#252525" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- Dipstick tube (right) -->
+  <path d="M480,360 L490,320 L495,290 L490,260" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="480" cy="365" r="8" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="490" y1="320" x2="378" y2="290" stroke="#252525" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- Oil pressure switch (top left) -->
+  <circle cx="40" cy="55"  r="7" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="47" y1="58" x2="128" y2="78" stroke="#252525" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- Stiffener -->
+  <rect x="160" y="198" width="160" height="10" rx="2" fill="#0d0d0d" stroke="#222" stroke-width="1"/>
+
+  <!-- Rear plate -->
+  <rect x="518" y="100" width="8" height="70" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <line x1="516" y1="125" x2="372" y2="140" stroke="#252525" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- Side cover -->
+  <rect x="512" y="280" width="28" height="36" rx="3" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+
+  <!-- Engine label -->
+  <text x="185" y="120" font-size="11" fill="#d4af37" font-family="'Barlow Condensed',sans-serif" font-weight="700">1NZ-FE</text>
+</svg>`;
+}
+
+function brakesSVG() {
+  return `<svg viewBox="0 0 580 520" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d0d">
+  <rect width="580" height="520" fill="#0d0d0d"/>
+  <!-- Grid -->
+  <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20,0 L0,0 0,20" fill="none" stroke="#141414" stroke-width="1"/>
+  </pattern>
+  <rect width="580" height="520" fill="url(#grid2)"/>
+  <!-- Axle line -->
+  <line x1="50" y1="260" x2="530" y2="260" stroke="#1e1e1e" stroke-width="2" stroke-dasharray="12,6"/>
+  <text x="270" y="256" font-size="9" fill="#2a2a2a" font-family="monospace" text-anchor="middle">FRONT AXLE CENTERLINE</text>
+  <!-- LH Disc rotor -->
+  <ellipse cx="115" cy="260" rx="70" ry="70" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="115" cy="260" rx="52" ry="52" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="115" cy="260" rx="20" ry="20" fill="#111" stroke="#222" stroke-width="1.5"/>
+  <!-- LH Caliper -->
+  <rect x="60" y="195" width="55" height="38" rx="4" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="65" y="200" width="20" height="28" rx="2" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+  <rect x="88" y="200" width="20" height="28" rx="2" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+  <!-- LH Brake pad indicators -->
+  <rect x="72" y="204" width="8" height="20" rx="1" fill="#1a1a1a" stroke="#d4af37" stroke-width="0.5"/>
+  <rect x="90" y="204" width="8" height="20" rx="1" fill="#1a1a1a" stroke="#d4af37" stroke-width="0.5"/>
+  <!-- RH Disc rotor -->
+  <ellipse cx="465" cy="260" rx="70" ry="70" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="465" cy="260" rx="52" ry="52" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="465" cy="260" rx="20" ry="20" fill="#111" stroke="#222" stroke-width="1.5"/>
+  <!-- RH Caliper -->
+  <rect x="465" y="195" width="55" height="38" rx="4" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="470" y="200" width="20" height="28" rx="2" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+  <rect x="493" y="200" width="20" height="28" rx="2" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+  <rect x="477" y="204" width="8" height="20" rx="1" fill="#1a1a1a" stroke="#d4af37" stroke-width="0.5"/>
+  <rect x="495" y="204" width="8" height="20" rx="1" fill="#1a1a1a" stroke="#d4af37" stroke-width="0.5"/>
+  <!-- Master cylinder -->
+  <rect x="245" y="95" width="90" height="40" rx="6" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="268" y="78" width="44" height="20" rx="4" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <text x="290" y="120" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">MASTER CYL</text>
+  <!-- Brake lines -->
+  <path d="M245,115 C200,115 180,170 160,175" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <path d="M335,115 C380,115 400,170 420,175" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <path d="M160,175 L87,210" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <path d="M420,175 L466,210" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <!-- Brake hose junctions -->
+  <circle cx="160" cy="175" r="5" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="420" cy="175" r="5" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Rear drum (right side illustration) -->
+  <ellipse cx="465" cy="420" rx="55" ry="55" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="465" cy="420" rx="38" ry="38" fill="#0a0a0a" stroke="#1e1e1e" stroke-width="1.5"/>
+  <ellipse cx="465" cy="420" rx="14" ry="14" fill="#111" stroke="#222" stroke-width="1"/>
+  <!-- Wheel cylinder inside drum -->
+  <rect x="440" y="396" width="50" height="10" rx="2" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- ABS sensor -->
+  <rect x="85" y="335" width="14" height="28" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <line x1="92" y1="335" x2="114" y2="300" stroke="#1e1e1e" stroke-width="1"/>
+  <!-- Labels -->
+  <text x="115" y="168" font-size="9" fill="#444" font-family="monospace" text-anchor="middle">FRONT LH</text>
+  <text x="465" y="168" font-size="9" fill="#444" font-family="monospace" text-anchor="middle">FRONT RH</text>
+  <text x="465" y="352" font-size="9" fill="#444" font-family="monospace" text-anchor="middle">REAR DRUM</text>
+</svg>`;
+}
+
+function suspensionSVG() {
+  return `<svg viewBox="0 0 580 520" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d0d">
+  <rect width="580" height="520" fill="#0d0d0d"/>
+  <pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20,0 L0,0 0,20" fill="none" stroke="#141414" stroke-width="1"/>
+  </pattern>
+  <rect width="580" height="520" fill="url(#grid3)"/>
+  <!-- Strut tower top -->
+  <ellipse cx="290" cy="55" rx="30" ry="15" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <circle cx="290" cy="55" r="10" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <!-- Coil spring -->
+  <path d="M280,70 C270,85 310,90 300,105 C290,120 270,125 280,140 C290,155 310,160 300,175 C290,190 270,195 280,210" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Shock absorber body -->
+  <rect x="282" y="80" width="16" height="140" rx="4" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="284" y="90" width="12" height="80" rx="2" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <!-- Shock rod -->
+  <line x1="290" y1="55" x2="290" y2="85" stroke="#333" stroke-width="3"/>
+  <!-- Steering knuckle -->
+  <path d="M250,220 L330,220 L340,290 L240,290 Z" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <!-- Hub bearing -->
+  <ellipse cx="290" cy="255" rx="32" ry="32" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="290" cy="255" rx="18" ry="18" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="290" cy="255" rx="7"  ry="7"  fill="#111" stroke="#222" stroke-width="1"/>
+  <!-- Upper control arm -->
+  <path d="M80,180 Q160,190 250,220" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="70" y="174" width="22" height="12" rx="3" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <!-- Upper ball joint -->
+  <circle cx="250" cy="220" r="10" fill="#111" stroke="#d4af37" stroke-width="1.5"/>
+  <!-- Lower control arm -->
+  <path d="M70,350 Q160,340 248,288" fill="none" stroke="#2a2a2a" stroke-width="4"/>
+  <rect x="58" y="344" width="24" height="14" rx="3" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <!-- Lower ball joint -->
+  <circle cx="248" cy="288" r="12" fill="#111" stroke="#d4af37" stroke-width="1.5"/>
+  <!-- Stabilizer bar -->
+  <path d="M60,310 L200,310 Q230,310 240,330 L240,355 Q240,375 270,380 L420,380 Q450,380 450,355 L450,330 Q450,310 480,310 L530,310" fill="none" stroke="#252525" stroke-width="2"/>
+  <!-- Stabilizer link LH -->
+  <line x1="240" y1="335" x2="170" y2="340" stroke="#252525" stroke-width="1.5"/>
+  <circle cx="240" cy="335" r="5" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Tie rod end -->
+  <line x1="330" y1="255" x2="450" y2="255" stroke="#252525" stroke-width="2"/>
+  <circle cx="450" cy="255" r="8" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="450" y1="255" x2="520" y2="255" stroke="#252525" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="290" y="490" font-size="9" fill="#333" font-family="monospace" text-anchor="middle">FRONT SUSPENSION — LH SHOWN</text>
+</svg>`;
+}
+
+function filtersSVG() {
+  return `<svg viewBox="0 0 580 520" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d0d">
+  <rect width="580" height="520" fill="#0d0d0d"/>
+  <pattern id="grid4" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20,0 L0,0 0,20" fill="none" stroke="#141414" stroke-width="1"/>
+  </pattern>
+  <rect width="580" height="520" fill="url(#grid4)"/>
+  <!-- Oil filter (spin-on) -->
+  <ellipse cx="115" cy="115" rx="35" ry="45" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <ellipse cx="115" cy="105" rx="25" ry="35" fill="#0a0a0a" stroke="#252525" stroke-width="1"/>
+  <line x1="115" y1="160" x2="115" y2="185" stroke="#252525" stroke-width="2"/>
+  <text x="115" y="105" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">OIL</text>
+  <text x="115" y="116" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">FILTER</text>
+  <!-- Air filter box -->
+  <rect x="190" y="60" width="120" height="80" rx="6" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="198" y="68" width="104" height="64" rx="4" fill="#0a0a0a" stroke="#1e1e1e" stroke-width="1"/>
+  <!-- Filter element inside -->
+  <rect x="204" y="74" width="92" height="52" rx="3" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <line x1="204" y1="82" x2="296" y2="82" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="204" y1="90" x2="296" y2="90" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="204" y1="98" x2="296" y2="98" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="204" y1="106" x2="296" y2="106" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="204" y1="114" x2="296" y2="114" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="250" y="136" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">AIR FILTER</text>
+  <!-- Fuel filter (diesel) -->
+  <rect x="430" y="55" width="50" height="100" rx="8" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="438" y="62" width="34" height="80" rx="5" fill="#0a0a0a" stroke="#252525" stroke-width="1"/>
+  <circle cx="455" cy="145" r="8" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <line x1="455" y1="55" x2="455" y2="40" stroke="#252525" stroke-width="2"/>
+  <line x1="435" y1="90" x2="418" y2="90" stroke="#252525" stroke-width="1.5"/>
+  <line x1="475" y1="90" x2="492" y2="90" stroke="#252525" stroke-width="1.5"/>
+  <text x="455" y="88" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">FUEL</text>
+  <text x="455" y="99" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">FILTER</text>
+  <!-- Cabin filter -->
+  <rect x="160" y="220" width="110" height="70" rx="5" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="168" y="228" width="94" height="54" rx="3" fill="#0a0a0a" stroke="#1e1e1e" stroke-width="1"/>
+  <line x1="168" y1="237" x2="262" y2="237" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="168" y1="247" x2="262" y2="247" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="168" y1="257" x2="262" y2="257" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="168" y1="267" x2="262" y2="267" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="215" y="285" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">CABIN FILTER</text>
+  <!-- Timing belt -->
+  <path d="M60,360 L60,440 L120,440 L120,360 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <ellipse cx="78" cy="375" rx="16" ry="16" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="104" cy="425" rx="10" ry="10" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <path d="M64,375 L64,425 M92,375 L114,425" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <text x="90" y="455" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">TIMING BELT</text>
+  <!-- V Belt -->
+  <path d="M340,380 L340,460 L420,460 L420,380 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <ellipse cx="360" cy="395" rx="14" ry="14" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="400" cy="445" rx="10" ry="10" fill="#0d0d0d" stroke="#252525" stroke-width="1.5"/>
+  <path d="M348,395 L392,445 M374,395 L410,445" fill="none" stroke="#252525" stroke-width="1.5"/>
+  <text x="380" y="476" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">ALT BELT</text>
+  <!-- Thermostat -->
+  <rect x="460" y="360" width="70" height="55" rx="8" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <circle cx="495" cy="387" rx="18" ry="18" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <circle cx="495" cy="387" rx="8"  ry="8"  fill="#0d0d0d" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="495" y="428" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">THERMOSTAT</text>
+  <!-- Radiator cap -->
+  <ellipse cx="290" cy="390" rx="22" ry="22" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <ellipse cx="290" cy="390" rx="14" ry="14" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <line x1="282" y1="390" x2="298" y2="390" stroke="#252525" stroke-width="2"/>
+  <line x1="290" y1="382" x2="290" y2="398" stroke="#252525" stroke-width="2"/>
+  <text x="290" y="422" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">RAD CAP</text>
+  <!-- ATF filter -->
+  <rect x="350" y="220" width="80" height="55" rx="5" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="358" y="228" width="64" height="40" rx="3" fill="#0a0a0a" stroke="#252525" stroke-width="1"/>
+  <text x="390" y="255" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">ATF FILTER</text>
+</svg>`;
+}
+
+function steeringSVG() {
+  return `<svg viewBox="0 0 580 520" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d0d">
+  <rect width="580" height="520" fill="#0d0d0d"/>
+  <pattern id="grid5" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20,0 L0,0 0,20" fill="none" stroke="#141414" stroke-width="1"/>
+  </pattern>
+  <rect width="580" height="520" fill="url(#grid5)"/>
+  <!-- Steering wheel -->
+  <ellipse cx="290" cy="70" rx="48" ry="48" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <ellipse cx="290" cy="70" rx="15" ry="15" fill="#111" stroke="#2e2e2e" stroke-width="2"/>
+  <line x1="290" y1="22" x2="290" y2="55" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="290" y1="85" x2="290" y2="118" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="242" y1="70" x2="275" y2="70" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="305" y1="70" x2="338" y2="70" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Steering column -->
+  <rect x="282" y="118" width="16" height="80" rx="3" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="278" y="165" width="24" height="18" rx="3" fill="#0d0d0d" stroke="#252525" stroke-width="1"/>
+  <!-- Universal joints -->
+  <rect x="283" y="195" width="14" height="14" rx="2" fill="#111" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(45 290 202)"/>
+  <line x1="290" y1="209" x2="275" y2="240" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="267" y="237" width="14" height="14" rx="2" fill="#111" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(20 274 244)"/>
+  <line x1="268" y1="250" x2="248" y2="270" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Steering rack -->
+  <rect x="100" y="270" width="380" height="28" rx="6" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="108" y="276" width="364" height="16" rx="4" fill="#0a0a0a" stroke="#252525" stroke-width="1"/>
+  <!-- Rack pinion entry -->
+  <rect x="234" y="250" width="28" height="26" rx="4" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="248" y1="250" x2="248" y2="270" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Inner tie rods -->
+  <line x1="100" y1="284" x2="65"  y2="284" stroke="#252525" stroke-width="3"/>
+  <line x1="480" y1="284" x2="515" y2="284" stroke="#252525" stroke-width="3"/>
+  <!-- Outer tie rod ends -->
+  <circle cx="55"  cy="284" r="12" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="525" cy="284" r="12" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- PS Pump -->
+  <ellipse cx="130" cy="160" rx="38" ry="38" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <ellipse cx="130" cy="160" rx="24" ry="24" fill="#0a0a0a" stroke="#252525" stroke-width="1.5"/>
+  <ellipse cx="130" cy="160" rx="10" ry="10" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="130" y="158" font-size="7" fill="#444" font-family="monospace" text-anchor="middle">PS</text>
+  <text x="130" y="167" font-size="7" fill="#444" font-family="monospace" text-anchor="middle">PUMP</text>
+  <!-- PS hose high pressure -->
+  <path d="M165,155 Q200,155 220,200 Q230,230 234,250" fill="none" stroke="#252525" stroke-width="2"/>
+  <!-- PS reservoir -->
+  <rect x="60" y="370" width="55" height="70" rx="6" fill="#111" stroke="#2e2e2e" stroke-width="1.5"/>
+  <rect x="67" y="377" width="41" height="55" rx="4" fill="#0a0a0a" stroke="#252525" stroke-width="1"/>
+  <line x1="87" y1="370" x2="87" y2="358" stroke="#252525" stroke-width="2"/>
+  <line x1="87" y1="358" x2="130" y2="198" stroke="#252525" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="87" y="455" font-size="8" fill="#444" font-family="monospace" text-anchor="middle">PS FLUID RES.</text>
+  <!-- Idler arm -->
+  <line x1="420" y1="284" x2="460" y2="340" stroke="#252525" stroke-width="2"/>
+  <rect x="452" y="334" width="16" height="28" rx="4" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Pitman arm -->
+  <line x1="380" y1="270" x2="400" y2="200" stroke="#252525" stroke-width="2.5"/>
+  <rect x="395" y="188" width="20" height="16" rx="3" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Rack boot LH -->
+  <path d="M100,274 Q90,280 100,290 L108,290 L108,274 Z" fill="#0d0d0d" stroke="#1a3a1a" stroke-width="1" stroke-dasharray="2,2"/>
+  <!-- Labels -->
+  <text x="290" y="508" font-size="9" fill="#333" font-family="monospace" text-anchor="middle">POWER STEERING SYSTEM — RACK &amp; PINION</text>
+</svg>`;
+}
+
+/* ── KMC PAGE CONTROLLER ── */
+let kmcActiveSys  = 'engine';
+let kmcActivePart = null;
+
+function initKMC() {
+  // Vehicle selectors
+  const makeEl  = document.getElementById('kmc-make');
+  const modelEl = document.getElementById('kmc-model');
+  const yearEl  = document.getElementById('kmc-year');
+
+  makeEl.addEventListener('change', () => {
+    const models = KMC_MODELS[makeEl.value] || [];
+    modelEl.innerHTML = '<option value="">Select Model</option>' +
+      models.map(m => `<option value="${m.v}">${m.l}</option>`).join('');
+    yearEl.innerHTML = '<option value="">Year</option>' +
+      KMC_YEARS.map(y => `<option value="${y}">${y}</option>`).join('');
+  });
+
+  document.getElementById('kmc-go-btn').addEventListener('click', () => {
+    const make  = makeEl.options[makeEl.selectedIndex]?.text || 'Toyota';
+    const model = modelEl.options[modelEl.selectedIndex]?.text || 'Corolla';
+    const year  = yearEl.value || '';
+    if (make && model) {
+      const sub = `${make} ${model}${year ? ' · ' + year : ''}`;
+      document.getElementById('kmc-sys-sub').textContent = sub;
+      toast(`Showing diagrams for ${sub}`, 'info', 2500);
+    }
+  });
+
+  // System tabs
+  document.querySelectorAll('.kmc-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.kmc-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      kmcActiveSys  = tab.dataset.sys;
+      kmcActivePart = null;
+      renderKMCDiagram();
+    });
+  });
+
+  renderKMCDiagram();
+}
+
+function renderKMCDiagram() {
+  const sys  = KMC_SYSTEMS[kmcActiveSys];
+  document.getElementById('kmc-sys-title').textContent = sys.title;
+
+  const canvas = document.getElementById('diagram-canvas');
+  canvas.innerHTML = buildDiagramSVG(kmcActiveSys);
+
+  // Overlay hotspot dots
+  sys.parts.forEach(part => {
+    const dot = document.createElement('div');
+    dot.className = 'hs-dot';
+    dot.style.left = part.x + '%';
+    dot.style.top  = part.y + '%';
+    dot.title = part.num + ' — ' + part.name;
+    dot.setAttribute('aria-label', part.name);
+    dot.setAttribute('tabindex', '0');
+
+    // Label
+    const lbl = document.createElement('div');
+    lbl.className = 'hs-label';
+    lbl.style.left = (part.x + 2) + '%';
+    lbl.style.top  = (part.y - 4) + '%';
+    lbl.textContent = part.num;
+    canvas.appendChild(lbl);
+
+    dot.addEventListener('click', () => selectKMCPart(part, dot));
+    dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') selectKMCPart(part, dot); });
+    canvas.appendChild(dot);
+  });
+
+  // Parts list
+  const grid = document.getElementById('kmc-list-grid');
+  grid.innerHTML = sys.parts.map(p =>
+    `<div class="kmc-list-item" data-pid="${p.id}">
+      <div class="kmc-list-dot"></div>
+      <div>
+        <span class="kmc-list-pnum">${p.num}</span>
+        <span class="kmc-list-pname">${p.name}</span>
+      </div>
+    </div>`
+  ).join('');
+  grid.querySelectorAll('.kmc-list-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const part = sys.parts.find(p => p.id === item.dataset.pid);
+      if (part) selectKMCPart(part, null, item);
+    });
+  });
+
+  // Reset detail panel
+  showKMCEmpty();
+}
+
+function selectKMCPart(part, dotEl, listEl) {
+  kmcActivePart = part;
+
+  // Highlight dot
+  document.querySelectorAll('.hs-dot').forEach(d => d.classList.remove('active'));
+  if (dotEl) dotEl.classList.add('active');
+
+  // Highlight list item
+  document.querySelectorAll('.kmc-list-item').forEach(i => i.classList.remove('active'));
+  if (listEl) {
+    listEl.classList.add('active');
+  } else {
+    const li = document.querySelector(`.kmc-list-item[data-pid="${part.id}"]`);
+    if (li) { li.classList.add('active'); li.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+  }
+
+  // Populate detail panel
+  document.getElementById('kd-num').textContent   = part.num;
+  document.getElementById('kd-name').textContent  = part.name;
+  document.getElementById('kd-desc').textContent  = part.desc;
+  document.getElementById('kd-cat').textContent   = part.cat;
+  document.getElementById('kd-fits').textContent  = part.fits;
+  document.getElementById('kd-cond').textContent  = part.cond;
+  document.getElementById('kd-price').textContent = part.price;
+
+  document.getElementById('kmc-empty-state').style.display  = 'none';
+  document.getElementById('kmc-part-detail').classList.add('visible');
+
+  // Wire action buttons
+  document.getElementById('kd-quote-btn').onclick = () => {
+    // Try to find in catalogue first
+    const match = FLAT.find(p =>
+      p.number && p.number.toLowerCase() === part.num.toLowerCase()
+    );
+    if (match) {
+      showPage('catalogue');
+      openModal(match.id);
+    } else {
+      // Pre-fill modal with part data and open
+      openModalWithPart(part);
+    }
+  };
+  document.getElementById('kd-wa-btn').onclick = () => {
+    const msg = `Hello Autoserve,\n\nI need a part from your diagram:\n🔩 *${part.name}*\n🏷️ Part No: *${part.num}*\n🚗 Fits: ${part.fits}\n\nPlease advise on availability and price.`;
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+  };
+
+  // Show related catalogue matches
+  showKMCRelated(part);
+
+  // Scroll sidebar into view on mobile
+  const detail = document.getElementById('kmc-part-detail');
+  if (window.innerWidth <= 960) {
+    detail.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+function openModalWithPart(part) {
+  // Create a temporary part object for the quote modal
+  activeModal = {id: 'kmc-' + part.id, name: part.name, number: part.num};
+  document.getElementById('modal-part-lbl').innerHTML = `<strong>${esc(part.name)}</strong> — ${esc(part.num)}`;
+  document.getElementById('modal-main').style.display = 'block';
+  document.getElementById('modal-success').style.display = 'none';
+  document.getElementById('backdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('q-name').focus(), 80);
+}
+
+function showKMCRelated(part) {
+  const wrap = document.getElementById('kmc-related-wrap');
+  const list = document.getElementById('kmc-related-list');
+  // Search catalogue for matching number or name
+  const matches = FLAT.filter(p =>
+    (p.number && p.number.toLowerCase().includes(part.num.toLowerCase().slice(0,8))) ||
+    (p.name   && p.name.toLowerCase().includes(part.name.toLowerCase().split(' ')[0]))
+  ).slice(0, 3);
+
+  if (!matches.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  list.innerHTML = matches.map(m => `
+    <div style="background:#111;border:1px solid #1e1e1e;border-radius:var(--r-sm);padding:10px 12px;margin-bottom:7px;cursor:pointer;transition:border-color .15s"
+      onmouseover="this.style.borderColor='rgba(212,175,55,.3)'" onmouseout="this.style.borderColor='#1e1e1e'"
+      onclick="showPage('catalogue');openModal('${escA(m.id)}')">
+      <div style="font-size:10.5px;color:var(--gold);font-family:monospace;font-weight:700">${esc(m.number||'—')}</div>
+      <div style="font-size:13px;font-weight:600;color:#eee;margin:2px 0">${esc(m.name)}</div>
+      <div style="font-size:11px;color:#555">${m.price ? 'KES ' + m.price.toLocaleString() : 'Contact for price'} · ${esc(m.condition||'New')}</div>
+    </div>`).join('');
+}
+
+function showKMCEmpty() {
+  document.getElementById('kmc-empty-state').style.display  = 'block';
+  document.getElementById('kmc-part-detail').classList.remove('visible');
+  document.getElementById('kmc-related-wrap').style.display = 'none';
+}
+
+// Init KMC when page is shown
+const _origShowPage = showPage;
+window.showPage = function(id) {
+  _origShowPage(id);
+  if (id === 'kmc') initKMC();
+};
+
+/* ════════════════════════════════════════
+   UTILS
+════════════════════════════════════════ */
+function esc(s)  { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function escA(s) { return String(s||'').replace(/"/g,'&quot;').replace(/'/g,"\\'"); }
+
+</script>
+</body>
+</html>
